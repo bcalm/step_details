@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en"> <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+  <title>Home</title>
+  <style> body{background-color:rgba(0,0,0,.01);font-family:Montserrat!important;margin:0}.flex{height:100vh;width:100vw;margin:10px!important;display:flex;flex-wrap:wrap;justify-content:flex-start}.card{position:relative;margin:10px;width:264px;height:410px;overflow:hidden;border-radius:10px}.card-front{height:inherit;width:inherit;position:absolute;background-repeat:no-repeat;background-size:cover;opacity:1;transition:.5s opacity,box-shadow ease-in-out}.name{position:relative;top:85%;text-align:center;font-weight:900;color:#fff;font-size:20px}.card-back{text-align:center;height:inherit;width:inherit;position:absolute;border-radius:10px;opacity:0;background:rgba(44,43,255,.7);box-shadow:0 0 10px 10px rgba(0,0,0,.2);transition:.5s opacity,box-shadow ease-in-out}.content{padding:84px 0 40px 0;margin:0;text-align:center;color:#fff}.username{font-size:20px;font-weight:900}.githubDetails{padding:20px 0;text-align:center}.githubDetails>span{line-height:1.6;padding:5px 0;font-size:18px;color:#fff;text-transform:capitalize}.know-more-btn{text-align:center;outline:0;padding:10px 30px;border-radius:10px;background:0 0;border:2px solid #fff;color:#fff;font-size:15px;font-weight:500;transition:color,background .2s ease-in-out}.know-more-btn>a{text-decoration:none;color:inherit}.know-more-btn:hover{cursor:pointer;background:#fff;color:rgba(44,43,255,.7);transition:color,background .2s ease-in-out}.card:hover .card-front{opacity:0;transition:.5s opacity,box-shadow ease-in-out}.card:hover .card-back{opacity:1;transition:.5s opacity,box-shadow ease-in-out}#nooranasrin{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58026892?v=4);}#rey-vthi{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58027828?v=4);}#anil-muraleedharan{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/56071561?v=4);}#photongupta{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58028408?v=4);}#Neha-sanserwal{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/26194323?v=4);}#satheesh-chandran{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58027206?v=4);}#bugdriver{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/41767214?v=4);}#anujachaitanya{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58026823?v=4);}#apurvagurme{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58025903?v=4);}#drishya-dobriyal{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58027350?v=4);}#lazyhackerthani{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/32271882?v=4);}#bernie-walker{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/58025656?v=4);}#sravani-labala{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/58027100?v=4);}#symbiote-ux{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/58027263?v=4);}#bsanthoshkumar{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58027436?v=4);}#naveen-kumar-vadla{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58026402?v=4);}#myultimatevision{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58025419?v=4);}#imvaishu{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/58027647?v=4);}#desibabua{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/58028488?v=4);}#bcalm{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/58028680?v=4);}#shankarbyageli{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/58026600?v=4);}#melodyni{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58027796?v=4);}#abhilashkasula{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58025056?v=4);}#dad-ka-raneesa{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58026896?v=4);}#shiviraj{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/58025059?v=4);}#cricket-lover{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/58028287?v=4);}#palpriyanshu{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58025838?v=4);}#unphydra{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58026024?v=4);}#venkybavisetti{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/58026249?v=4);}#rahitkar{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58026094?v=4);}#mildshower{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/58025792?v=4);}#gulsane{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58028207?v=4);}#pssruthy{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58027046?v=4);}#trinangkur{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/58026183?v=4);}#armanaaquib{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/44823431?v=4);}#sukhiboi{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/40167376?v=4);} </style>
+  </head> 
+ <body>
+  <div class="flex">
+  <div class="card">
+      <div class="card-front" id=nooranasrin>
+        <div class="name">
+          <span>Noora Nasrin</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">nooranasrin</span>
+          <p class="githubDetails">
+            <span>9 repositories</span><br />
+            <span>16 followers</span><br />
+            <span>18 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/nooranasrin">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=rey-vthi>
+        <div class="name">
+          <span>null</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">rey-vthi</span>
+          <p class="githubDetails">
+            <span>4 repositories</span><br />
+            <span>17 followers</span><br />
+            <span>24 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/rey-vthi">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=anil-muraleedharan>
+        <div class="name">
+          <span>anilmuraleedharan</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">anil-muraleedharan</span>
+          <p class="githubDetails">
+            <span>3 repositories</span><br />
+            <span>26 followers</span><br />
+            <span>41 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/anil-muraleedharan">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=photongupta>
+        <div class="name">
+          <span>Rashmi Gupta</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">photongupta</span>
+          <p class="githubDetails">
+            <span>4 repositories</span><br />
+            <span>16 followers</span><br />
+            <span>21 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/photongupta">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=Neha-sanserwal>
+        <div class="name">
+          <span>Neha Sanserwal</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">Neha-sanserwal</span>
+          <p class="githubDetails">
+            <span>6 repositories</span><br />
+            <span>18 followers</span><br />
+            <span>1 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/Neha-sanserwal">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=satheesh-chandran>
+        <div class="name">
+          <span>satheesh .c</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">satheesh-chandran</span>
+          <p class="githubDetails">
+            <span>2 repositories</span><br />
+            <span>9 followers</span><br />
+            <span>6 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/satheesh-chandran">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=bugdriver>
+        <div class="name">
+          <span>Rajat Kushwaha</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">bugdriver</span>
+          <p class="githubDetails">
+            <span>4 repositories</span><br />
+            <span>17 followers</span><br />
+            <span>6 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/bugdriver">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=anujachaitanya>
+        <div class="name">
+          <span>anujachaitanya</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">anujachaitanya</span>
+          <p class="githubDetails">
+            <span>5 repositories</span><br />
+            <span>17 followers</span><br />
+            <span>19 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/anujachaitanya">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=apurvagurme>
+        <div class="name">
+          <span>null</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">apurvagurme</span>
+          <p class="githubDetails">
+            <span>2 repositories</span><br />
+            <span>15 followers</span><br />
+            <span>17 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/apurvagurme">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=drishya-dobriyal>
+        <div class="name">
+          <span>null</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">drishya-dobriyal</span>
+          <p class="githubDetails">
+            <span>2 repositories</span><br />
+            <span>13 followers</span><br />
+            <span>9 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/drishya-dobriyal">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=lazyhackerthani>
+        <div class="name">
+          <span>thanya geetha santhosh</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">lazyhackerthani</span>
+          <p class="githubDetails">
+            <span>3 repositories</span><br />
+            <span>17 followers</span><br />
+            <span>33 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/lazyhackerthani">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=bernie-walker>
+        <div class="name">
+          <span>Bernard Nehal D'Cunha</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">bernie-walker</span>
+          <p class="githubDetails">
+            <span>3 repositories</span><br />
+            <span>17 followers</span><br />
+            <span>20 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/bernie-walker">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=sravani-labala>
+        <div class="name">
+          <span>Sravani Labala</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">sravani-labala</span>
+          <p class="githubDetails">
+            <span>4 repositories</span><br />
+            <span>27 followers</span><br />
+            <span>43 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/sravani-labala">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=symbiote-ux>
+        <div class="name">
+          <span>Saurabh Chauhan</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">symbiote-ux</span>
+          <p class="githubDetails">
+            <span>10 repositories</span><br />
+            <span>19 followers</span><br />
+            <span>30 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/symbiote-ux">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=bsanthoshkumar>
+        <div class="name">
+          <span>Santhosh</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">bsanthoshkumar</span>
+          <p class="githubDetails">
+            <span>2 repositories</span><br />
+            <span>10 followers</span><br />
+            <span>12 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/bsanthoshkumar">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=naveen-kumar-vadla>
+        <div class="name">
+          <span>naveen kumar</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">naveen-kumar-vadla</span>
+          <p class="githubDetails">
+            <span>7 repositories</span><br />
+            <span>24 followers</span><br />
+            <span>40 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/naveen-kumar-vadla">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=myultimatevision>
+        <div class="name">
+          <span>Nagendra Sai</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">myultimatevision</span>
+          <p class="githubDetails">
+            <span>6 repositories</span><br />
+            <span>9 followers</span><br />
+            <span>8 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/myultimatevision">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=imvaishu>
+        <div class="name">
+          <span>Vaishnavi Yadav</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">imvaishu</span>
+          <p class="githubDetails">
+            <span>4 repositories</span><br />
+            <span>14 followers</span><br />
+            <span>13 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/imvaishu">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=desibabua>
+        <div class="name">
+          <span>Ayush kumar</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">desibabua</span>
+          <p class="githubDetails">
+            <span>9 repositories</span><br />
+            <span>20 followers</span><br />
+            <span>38 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/desibabua">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=bcalm>
+        <div class="name">
+          <span>Vikram Singh</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">bcalm</span>
+          <p class="githubDetails">
+            <span>5 repositories</span><br />
+            <span>15 followers</span><br />
+            <span>5 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/bcalm">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=shankarbyageli>
+        <div class="name">
+          <span>Shankar Byageli</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">shankarbyageli</span>
+          <p class="githubDetails">
+            <span>3 repositories</span><br />
+            <span>16 followers</span><br />
+            <span>16 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/shankarbyageli">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=melodyni>
+        <div class="name">
+          <span>RK</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">melodyni</span>
+          <p class="githubDetails">
+            <span>5 repositories</span><br />
+            <span>14 followers</span><br />
+            <span>2 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/melodyni">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=abhilashkasula>
+        <div class="name">
+          <span>Abhilash Kasula</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">abhilashkasula</span>
+          <p class="githubDetails">
+            <span>8 repositories</span><br />
+            <span>11 followers</span><br />
+            <span>1 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/abhilashkasula">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=dad-ka-raneesa>
+        <div class="name">
+          <span>dad love❤️</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">dad-ka-raneesa</span>
+          <p class="githubDetails">
+            <span>3 repositories</span><br />
+            <span>19 followers</span><br />
+            <span>40 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/dad-ka-raneesa">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=shiviraj>
+        <div class="name">
+          <span>Shivam Rajput</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">shiviraj</span>
+          <p class="githubDetails">
+            <span>9 repositories</span><br />
+            <span>24 followers</span><br />
+            <span>48 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/shiviraj">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=cricket-lover>
+        <div class="name">
+          <span>phaneendra</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">cricket-lover</span>
+          <p class="githubDetails">
+            <span>1 repositories</span><br />
+            <span>10 followers</span><br />
+            <span>1 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/cricket-lover">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=palpriyanshu>
+        <div class="name">
+          <span>null</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">palpriyanshu</span>
+          <p class="githubDetails">
+            <span>9 repositories</span><br />
+            <span>14 followers</span><br />
+            <span>40 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/palpriyanshu">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=unphydra>
+        <div class="name">
+          <span>Rivu Layek</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">unphydra</span>
+          <p class="githubDetails">
+            <span>10 repositories</span><br />
+            <span>26 followers</span><br />
+            <span>39 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/unphydra">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=venkybavisetti>
+        <div class="name">
+          <span>venkatesh bavisetti</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">venkybavisetti</span>
+          <p class="githubDetails">
+            <span>4 repositories</span><br />
+            <span>22 followers</span><br />
+            <span>33 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/venkybavisetti">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=rahitkar>
+        <div class="name">
+          <span>Winterfell</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">rahitkar</span>
+          <p class="githubDetails">
+            <span>3 repositories</span><br />
+            <span>19 followers</span><br />
+            <span>25 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/rahitkar">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=mildshower>
+        <div class="name">
+          <span>Sudipta Kundu</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">mildshower</span>
+          <p class="githubDetails">
+            <span>9 repositories</span><br />
+            <span>27 followers</span><br />
+            <span>29 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/mildshower">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=gulsane>
+        <div class="name">
+          <span>null</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">gulsane</span>
+          <p class="githubDetails">
+            <span>4 repositories</span><br />
+            <span>9 followers</span><br />
+            <span>7 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/gulsane">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=pssruthy>
+        <div class="name">
+          <span>Sruthy P S</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">pssruthy</span>
+          <p class="githubDetails">
+            <span>6 repositories</span><br />
+            <span>26 followers</span><br />
+            <span>39 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/pssruthy">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=trinangkur>
+        <div class="name">
+          <span>Trinangkur Chatterjee</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">trinangkur</span>
+          <p class="githubDetails">
+            <span>2 repositories</span><br />
+            <span>15 followers</span><br />
+            <span>4 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/trinangkur">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=armanaaquib>
+        <div class="name">
+          <span>AAQUIB EQUBAL</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">armanaaquib</span>
+          <p class="githubDetails">
+            <span>10 repositories</span><br />
+            <span>16 followers</span><br />
+            <span>6 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/armanaaquib">Know More</a></button>
+        </p>
+      </div>
+    </div><div class="card">
+      <div class="card-front" id=sukhiboi>
+        <div class="name">
+          <span>sukhiboi</span>
+        </div>
+      </div>
+      <div class="card-back">
+        <p class="content">
+          <span class="username">sukhiboi</span>
+          <p class="githubDetails">
+            <span>8 repositories</span><br />
+            <span>14 followers</span><br />
+            <span>8 following</span>
+          </p>
+          <button class="know-more-btn"><a target="_blank" href="https://github.com/sukhiboi">Know More</a></button>
+        </p>
+      </div>
+    </div>
+  </div>
+  </body> </html>
