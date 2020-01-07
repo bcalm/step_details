@@ -3,3 +3,4 @@ Font: Montserrat [Google Font]
 
 Headings:
   Large: 32px
+  Medium: 25px
