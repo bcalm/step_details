@@ -60,4 +60,4 @@ const html = `<!DOCTYPE html>
 
 writeFileSync("./js/home.js", script, "utf8");
 writeFileSync("./styles/home.css", styles, "utf8");
-writeFileSync("./home2.html", html, "utf8");
+writeFileSync("./index.html", html, "utf8");
