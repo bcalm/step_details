@@ -1,448 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en"> <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
-  <title>Home</title>
-  <style>
-    body {
-      background-color: rgba(0, 0, 0, 0.01);
-      font-family: Montserrat !important;
-      margin: 0;
-    }
-
-    .hide {
-      display: none;
-    }
-
-    .flex {
-      height: 100vh;
-      width: 100vw;
-      margin: 10px !important;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-    }
-
-    .card {
-      position: relative;
-      margin: 10px;
-      width: 264px;
-      height: 410px;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .card-front {
-      height: inherit;
-      width: inherit;
-      position: absolute;
-      background-repeat: no-repeat;
-      background-size: cover;
-      opacity: 1;
-      transition: 0.5s opacity, box-shadow ease-in-out;
-    }
-
-    .name {
-      position: relative;
-      top: 85%;
-      text-align: center;
-      font-weight: 900;
-      color: #fff;
-      font-size: 20px;
-    }
-
-    .card-back {
-      text-align: center;
-      height: inherit;
-      width: inherit;
-      position: absolute;
-      border-radius: 10px;
-      opacity: 0;
-      background: rgba(0, 0, 0, 0.7);
-      box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
-      transition: 0.5s opacity, box-shadow ease-in-out;
-    }
-
-    .content {
-      padding: 84px 0 40px 0;
-      margin: 0;
-      text-align: center;
-      color: #fff;
-    }
-
-    .username {
-      font-size: 20px;
-      font-weight: 900;
-    }
-
-    .githubDetails {
-      padding: 20px 0;
-      text-align: center;
-    }
-
-    .githubDetails>span {
-      line-height: 1.6;
-      padding: 5px 0;
-      font-size: 18px;
-      color: #fff;
-      text-transform: capitalize;
-    }
-
-    .know-more-btn {
-      text-align: center;
-      outline: 0;
-      padding: 10px 30px;
-      border-radius: 10px;
-      background: 0 0;
-      border: 2px solid #fff;
-      color: #fff;
-      font-size: 15px;
-      font-weight: 500;
-      transition: color, background 0.2s ease-in-out;
-    }
-
-    .know-more-btn>a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .know-more-btn:hover {
-      cursor: pointer;
-      background: #fff;
-      color: rgba(0, 0, 0, 0.7);
-      transition: color, background 0.2s ease-in-out;
-    }
-
-    .card:hover .card-front {
-      opacity: 0;
-      transition: 0.5s opacity, box-shadow ease-in-out;
-    }
-
-    .card:hover .card-back {
-      opacity: 1;
-      transition: 0.5s opacity, box-shadow ease-in-out;
-    }
-
-    .header {
-      text-align: center;
-      padding: 30px 0 10px 0;
-    }
-
-    .search-bar {
-      padding: 5px 10px;
-      font-size: 20px;
-      border: none;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-      background: 0 0;
-      outline: none;
-    }
-
-    #craftybones>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/131062?v=4);
-    }
-
-    #vharidas>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/4221773?v=4);
-    }
-
-    #blpabhishek>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/15167308?v=4);
-    }
-
-    #reshmisaji>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/44020004?v=4);
-    }
-
-    #keerthyeb>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/44020061?v=4);
-    }
-
-    #swapnillothe>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/44019530?v=4);
-    }
-
-    #rahulmadaan>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/44020002?v=4);
-    }
-
-    #affishaikh>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/44019928?v=4);
-    }
-
-    #arnabghs>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/44019889?v=4);
-    }
-
-    #sapanaKale>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/44019343?v=4);
-    }
-
-    #leelanakka>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/44019459?v=4);
-    }
-
-    #mustakip>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/44019216?v=4);
-    }
-
-    #azimarif>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/44020819?v=4);
-    }
-
-    #bsrushti>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/44019169?v=4);
-    }
-
-    #kukshalkanishka>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/37463477?v=4);
-    }
-
-    #srijayanth>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/36004266?v=4);
-    }
-
-    #durgaprasadd>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/44020610?v=4);
-    }
-
-    #gayatrijagtap>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/44019996?v=4);
-    }
-
-    #cksharma11>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/22887527?v=4);
-    }
-
-    #dheeraj-p>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/44019618?v=4);
-    }
-
-    #brain-eater>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/34330361?v=4);
-    }
-
-    #athulpram>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/44019979?v=4);
-    }
-
-    #anupingale>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/44020027?v=4);
-    }
-
-    #luckyganesh>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/44020019?v=4);
-    }
-
-    #rishabghosh>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/44020133?v=4);
-    }
-
-    #luciferankon>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/44019225?v=4);
-    }
-
-    #heerajoshi>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/44017701?v=4);
-    }
-
-    #vprince001>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/16836599?v=4);
-    }
-
-    #deepikabartwal>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/44020585?v=4);
-    }
-
-    #swagatachakraborty>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/44020073?v=4);
-    }
-
-    #moumitaguri>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/44020214?v=4);
-    }
-
-    #tushartambe>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/44019295?v=4);
-    }
-
-    #sgauravk>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/44020369?v=4);
-    }
-
-    #akankshakutal>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/44019583?v=4);
-    }
-
-    #namankrs>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/44020825?v=4);
-    }
-
-    #maheshsovani>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/44019471?v=4);
-    }
-
-    #sumandeepak8>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/44019903?v=4);
-    }
-
-    #nooranasrin>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58026892?v=4);
-    }
-
-    #rey-vthi>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58027828?v=4);
-    }
-
-    #anil-muraleedharan>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/56071561?v=4);
-    }
-
-    #photongupta>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58028408?v=4);
-    }
-
-    #Neha-sanserwal>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/26194323?v=4);
-    }
-
-    #satheesh-chandran>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58027206?v=4);
-    }
-
-    #bugdriver>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/41767214?v=4);
-    }
-
-    #anujachaitanya>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58026823?v=4);
-    }
-
-    #apurvagurme>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58025903?v=4);
-    }
-
-    #drishya-dobriyal>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58027350?v=4);
-    }
-
-    #lazyhackerthani>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/32271882?v=4);
-    }
-
-    #bernie-walker>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/58025656?v=4);
-    }
-
-    #sravani-labala>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/58027100?v=4);
-    }
-
-    #symbiote-ux>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/58027263?v=4);
-    }
-
-    #bsanthoshkumar>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58027436?v=4);
-    }
-
-    #naveen-kumar-vadla>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58026402?v=4);
-    }
-
-    #myultimatevision>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58025419?v=4);
-    }
-
-    #imvaishu>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/58027647?v=4);
-    }
-
-    #desibabua>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/58028488?v=4);
-    }
-
-    #bcalm>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/58028680?v=4);
-    }
-
-    #shankarbyageli>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/58026600?v=4);
-    }
-
-    #melodyni>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58027796?v=4);
-    }
-
-    #abhilashkasula>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58025056?v=4);
-    }
-
-    #dad-ka-raneesa>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58026896?v=4);
-    }
-
-    #shiviraj>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/58025059?v=4);
-    }
-
-    #cricket-lover>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/58028287?v=4);
-    }
-
-    #palpriyanshu>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58025838?v=4);
-    }
-
-    #unphydra>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58026024?v=4);
-    }
-
-    #venkybavisetti>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/58026249?v=4);
-    }
-
-    #rahitkar>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58026094?v=4);
-    }
-
-    #mildshower>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/58025792?v=4);
-    }
-
-    #gulsane>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58028207?v=4);
-    }
-
-    #pssruthy>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58027046?v=4);
-    }
-
-    #trinangkur>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/58026183?v=4);
-    }
-
-    #armanaaquib>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/44823431?v=4);
-    }
-
-    #sukhiboi>.card-front {
-      background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/40167376?v=4);
-    }
-  </style>
-</head>
-
-<body>
-  <div class="header"><input class="search-bar" placeholder="Search..." id="searchBar"></div>
-  <div class="flex">
-    <div class="card" id=craftybones>
-      <div class="card-front">
+  <title>Github User Data</title>
+  <style> body {background-color: rgba(0, 0, 0, 0.01);font-family: Montserrat !important;margin: 0;}.hide {display: none;}.flex {height: 100vh;width: 100vw;margin: 10px !important;display: flex;flex-wrap: wrap;justify-content: flex-start;}.card {position: relative;margin: 10px;width: 264px;height: 410px;overflow: hidden;border-radius: 10px;box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);}.card-front {height: inherit;width: inherit;position: absolute;background-repeat: no-repeat;background-size: cover;opacity: 1;transition: 0.5s opacity, box-shadow ease-in-out;}.name {position: relative; top: 74%; line-height: 1.5;text-align: center;font-weight: 900;color: #fff;font-size: 20px;} .extra-details {line-height: 1.4} .extra-details > span {font-weight: 100; font-size: 14px; line-height:1.4}.card-back {text-align: center;height: inherit;width: inherit;position: absolute;border-radius: 10px;opacity: 0;background: rgba(0, 0, 0, 0.7);box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);transition: 0.5s opacity, box-shadow ease-in-out;}.content {padding: 84px 0 40px 0;margin: 0;text-align: center;color: #fff;}.username {font-size: 20px;font-weight: 900;}.githubDetails {padding: 20px 0;text-align: center;}.githubDetails > span {line-height: 1.6;padding: 5px 0;font-size: 18px;color: #fff;text-transform: capitalize;}.know-more-btn {text-align: center;outline: 0;padding: 10px 30px;border-radius: 10px;background: 0 0;border: 2px solid #fff;color: #fff;font-size: 15px;font-weight: 500;transition: color, background 0.2s ease-in-out;}.know-more-btn > a {text-decoration: none;color: inherit;}.know-more-btn:hover {cursor: pointer;background: #fff;color: rgba(0, 0, 0, 0.7);transition: color, background 0.2s ease-in-out;}.card:hover .card-front {opacity: 0;transition: 0.5s opacity, box-shadow ease-in-out;}.card:hover .card-back {opacity: 1;transition: 0.5s opacity, box-shadow ease-in-out;}.header {text-align: center;padding: 30px 0 10px 0;}.search-bar {padding: 5px 10px; font-size: 20px; border: none; border-bottom: 1px solid rgba(0, 0, 0, 0.1); background: 0 0; outline: none; font-weight: 700; color: rgba(0, 0, 0, 0.6);}#craftybones>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/131062?v=4);}#vharidas>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/4221773?v=4);}#blpabhishek>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/15167308?v=4);}#reshmisaji>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/44020004?v=4);}#keerthyeb>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/44020061?v=4);}#swapnillothe>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/44019530?v=4);}#rahulmadaan>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/44020002?v=4);}#affishaikh>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/44019928?v=4);}#arnabghs>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/44019889?v=4);}#sapanaKale>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/44019343?v=4);}#leelanakka>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/44019459?v=4);}#mustakip>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/44019216?v=4);}#azimarif>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/44020819?v=4);}#bsrushti>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/44019169?v=4);}#kukshalkanishka>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/37463477?v=4);}#srijayanth>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/36004266?v=4);}#durgaprasadd>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/44020610?v=4);}#gayatrijagtap>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/44019996?v=4);}#cksharma11>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/22887527?v=4);}#dheeraj-p>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/44019618?v=4);}#brain-eater>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/34330361?v=4);}#athulpram>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/44019979?v=4);}#anupingale>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/44020027?v=4);}#luckyganesh>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/44020019?v=4);}#rishabghosh>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/44020133?v=4);}#luciferankon>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/44019225?v=4);}#heerajoshi>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/44017701?v=4);}#vprince001>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/16836599?v=4);}#deepikabartwal>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/44020585?v=4);}#swagatachakraborty>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/44020073?v=4);}#moumitaguri>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/44020214?v=4);}#tushartambe>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/44019295?v=4);}#sgauravk>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/44020369?v=4);}#akankshakutal>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/44019583?v=4);}#namankrs>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/44020825?v=4);}#maheshsovani>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/44019471?v=4);}#sumandeepak8>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/44019903?v=4);}#nooranasrin>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58026892?v=4);}#rey-vthi>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58027828?v=4);}#anil-muraleedharan>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/56071561?v=4);}#photongupta>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58028408?v=4);}#Neha-sanserwal>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/26194323?v=4);}#satheesh-chandran>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58027206?v=4);}#bugdriver>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/41767214?v=4);}#anujachaitanya>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58026823?v=4);}#apurvagurme>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58025903?v=4);}#drishya-dobriyal>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58027350?v=4);}#lazyhackerthani>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/32271882?v=4);}#bernie-walker>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/58025656?v=4);}#sravani-labala>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/58027100?v=4);}#symbiote-ux>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/58027263?v=4);}#bsanthoshkumar>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58027436?v=4);}#naveen-kumar-vadla>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58026402?v=4);}#myultimatevision>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58025419?v=4);}#imvaishu>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/58027647?v=4);}#desibabua>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/58028488?v=4);}#bcalm>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/58028680?v=4);}#shankarbyageli>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/58026600?v=4);}#melodyni>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58027796?v=4);}#abhilashkasula>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58025056?v=4);}#dad-ka-raneesa>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58026896?v=4);}#shiviraj>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/58025059?v=4);}#cricket-lover>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/58028287?v=4);}#palpriyanshu>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58025838?v=4);}#unphydra>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58026024?v=4);}#venkybavisetti>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars2.githubusercontent.com/u/58026249?v=4);}#rahitkar>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58026094?v=4);}#mildshower>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/58025792?v=4);}#gulsane>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/58028207?v=4);}#pssruthy>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars0.githubusercontent.com/u/58027046?v=4);}#trinangkur>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/58026183?v=4);}#armanaaquib>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars1.githubusercontent.com/u/44823431?v=4);}#sukhiboi>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7) 90%), url(https://avatars3.githubusercontent.com/u/40167376?v=4);} </style>
+  </head> 
+ <body><div class="header"><input class="search-bar" placeholder="Search..." id="searchBar"></div><div class="flex"><div class="card" id=craftybones>
+      <div class="card-front" >
         <div class="name">
-          <span>Srijayanth Sridhar</span>
+          <span>Srijayanth Sridhar</span><div class="extra-details"><span>craftybones</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -453,14 +21,13 @@
             <span>98 followers</span><br />
             <span>1 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/craftybones">Know More</a></button>
+          <a target="_blank" href="https://github.com/craftybones"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=vharidas>
-      <div class="card-front">
+    </div><div class="card" id=vharidas>
+      <div class="card-front" >
         <div class="name">
-          <span>vharidas</span>
+          <span>vharidas</span><div class="extra-details"><span>vharidas</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -471,14 +38,13 @@
             <span>32 followers</span><br />
             <span>0 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/vharidas">Know More</a></button>
+          <a target="_blank" href="https://github.com/vharidas"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=blpabhishek>
-      <div class="card-front">
+    </div><div class="card" id=blpabhishek>
+      <div class="card-front" >
         <div class="name">
-          <span>Abhishek Gupta</span>
+          <span>Abhishek Gupta</span><div class="extra-details"><span>blpabhishek</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -489,14 +55,13 @@
             <span>28 followers</span><br />
             <span>2 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/blpabhishek">Know More</a></button>
+          <a target="_blank" href="https://github.com/blpabhishek"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=reshmisaji>
-      <div class="card-front">
+    </div><div class="card" id=reshmisaji>
+      <div class="card-front" >
         <div class="name">
-          <span>Reshmi R S</span>
+          <span>Reshmi R S</span><div class="extra-details"><span>reshmisaji</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -507,14 +72,13 @@
             <span>20 followers</span><br />
             <span>30 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/reshmisaji">Know More</a></button>
+          <a target="_blank" href="https://github.com/reshmisaji"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=keerthyeb>
-      <div class="card-front">
+    </div><div class="card" id=keerthyeb>
+      <div class="card-front" >
         <div class="name">
-          <span>keerthyeb</span>
+          <span>keerthyeb</span><div class="extra-details"><span>keerthyeb</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -525,14 +89,13 @@
             <span>13 followers</span><br />
             <span>11 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/keerthyeb">Know More</a></button>
+          <a target="_blank" href="https://github.com/keerthyeb"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=swapnillothe>
-      <div class="card-front">
+    </div><div class="card" id=swapnillothe>
+      <div class="card-front" >
         <div class="name">
-          <span>swapnillothe</span>
+          <span>swapnillothe</span><div class="extra-details"><span>swapnillothe</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -543,14 +106,13 @@
             <span>21 followers</span><br />
             <span>38 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/swapnillothe">Know More</a></button>
+          <a target="_blank" href="https://github.com/swapnillothe"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=rahulmadaan>
-      <div class="card-front">
+    </div><div class="card" id=rahulmadaan>
+      <div class="card-front" >
         <div class="name">
-          <span>Rahul</span>
+          <span>Rahul</span><div class="extra-details"><span>rahulmadaan</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -561,14 +123,13 @@
             <span>23 followers</span><br />
             <span>40 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/rahulmadaan">Know More</a></button>
+          <a target="_blank" href="https://github.com/rahulmadaan"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=affishaikh>
-      <div class="card-front">
+    </div><div class="card" id=affishaikh>
+      <div class="card-front" >
         <div class="name">
-          <span>affishaikh</span>
+          <span>affishaikh</span><div class="extra-details"><span>affishaikh</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -579,14 +140,13 @@
             <span>18 followers</span><br />
             <span>28 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/affishaikh">Know More</a></button>
+          <a target="_blank" href="https://github.com/affishaikh"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=arnabghs>
-      <div class="card-front">
+    </div><div class="card" id=arnabghs>
+      <div class="card-front" >
         <div class="name">
-          <span>Arnab Ghosh</span>
+          <span>Arnab Ghosh</span><div class="extra-details"><span>arnabghs</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -597,14 +157,13 @@
             <span>22 followers</span><br />
             <span>38 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/arnabghs">Know More</a></button>
+          <a target="_blank" href="https://github.com/arnabghs"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=sapanaKale>
-      <div class="card-front">
+    </div><div class="card" id=sapanaKale>
+      <div class="card-front" >
         <div class="name">
-          <span>sapanaKale</span>
+          <span>sapanaKale</span><div class="extra-details"><span>sapanaKale</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -615,14 +174,13 @@
             <span>19 followers</span><br />
             <span>16 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/sapanaKale">Know More</a></button>
+          <a target="_blank" href="https://github.com/sapanaKale"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=leelanakka>
-      <div class="card-front">
+    </div><div class="card" id=leelanakka>
+      <div class="card-front" >
         <div class="name">
-          <span>Nakka Leela Prasanth</span>
+          <span>Nakka Leela Prasanth</span><div class="extra-details"><span>leelanakka</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -633,14 +191,13 @@
             <span>16 followers</span><br />
             <span>10 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/leelanakka">Know More</a></button>
+          <a target="_blank" href="https://github.com/leelanakka"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=mustakip>
-      <div class="card-front">
+    </div><div class="card" id=mustakip>
+      <div class="card-front" >
         <div class="name">
-          <span>mustakip</span>
+          <span>mustakip</span><div class="extra-details"><span>mustakip</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -651,14 +208,13 @@
             <span>18 followers</span><br />
             <span>40 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/mustakip">Know More</a></button>
+          <a target="_blank" href="https://github.com/mustakip"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=azimarif>
-      <div class="card-front">
+    </div><div class="card" id=azimarif>
+      <div class="card-front" >
         <div class="name">
-          <span>Arif</span>
+          <span>Arif</span><div class="extra-details"><span>azimarif</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -669,14 +225,13 @@
             <span>20 followers</span><br />
             <span>5 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/azimarif">Know More</a></button>
+          <a target="_blank" href="https://github.com/azimarif"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=bsrushti>
-      <div class="card-front">
+    </div><div class="card" id=bsrushti>
+      <div class="card-front" >
         <div class="name">
-          <span>bsrushti</span>
+          <span>bsrushti</span><div class="extra-details"><span>bsrushti</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -687,14 +242,13 @@
             <span>19 followers</span><br />
             <span>37 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/bsrushti">Know More</a></button>
+          <a target="_blank" href="https://github.com/bsrushti"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=kukshalkanishka>
-      <div class="card-front">
+    </div><div class="card" id=kukshalkanishka>
+      <div class="card-front" >
         <div class="name">
-          <span>kukshalkanishka</span>
+          <span>kukshalkanishka</span><div class="extra-details"><span>kukshalkanishka</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -705,15 +259,13 @@
             <span>22 followers</span><br />
             <span>23 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/kukshalkanishka">Know
-              More</a></button>
+          <a target="_blank" href="https://github.com/kukshalkanishka"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=srijayanth>
-      <div class="card-front">
+    </div><div class="card" id=srijayanth>
+      <div class="card-front" >
         <div class="name">
-          <span>srijayanth</span>
+          <span>srijayanth</span><div class="extra-details"><span>srijayanth</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -724,14 +276,13 @@
             <span>4 followers</span><br />
             <span>0 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/srijayanth">Know More</a></button>
+          <a target="_blank" href="https://github.com/srijayanth"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=durgaprasadd>
-      <div class="card-front">
+    </div><div class="card" id=durgaprasadd>
+      <div class="card-front" >
         <div class="name">
-          <span>Durga Prasad</span>
+          <span>Durga Prasad</span><div class="extra-details"><span>durgaprasadd</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -742,14 +293,13 @@
             <span>18 followers</span><br />
             <span>55 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/durgaprasadd">Know More</a></button>
+          <a target="_blank" href="https://github.com/durgaprasadd"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=gayatrijagtap>
-      <div class="card-front">
+    </div><div class="card" id=gayatrijagtap>
+      <div class="card-front" >
         <div class="name">
-          <span>gayatrijagtap</span>
+          <span>gayatrijagtap</span><div class="extra-details"><span>gayatrijagtap</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -760,15 +310,13 @@
             <span>16 followers</span><br />
             <span>28 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/gayatrijagtap">Know
-              More</a></button>
+          <a target="_blank" href="https://github.com/gayatrijagtap"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=cksharma11>
-      <div class="card-front">
+    </div><div class="card" id=cksharma11>
+      <div class="card-front" >
         <div class="name">
-          <span>Chandan Kumar</span>
+          <span>Chandan Kumar</span><div class="extra-details"><span>cksharma11</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -779,14 +327,13 @@
             <span>27 followers</span><br />
             <span>9 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/cksharma11">Know More</a></button>
+          <a target="_blank" href="https://github.com/cksharma11"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=dheeraj-p>
-      <div class="card-front">
+    </div><div class="card" id=dheeraj-p>
+      <div class="card-front" >
         <div class="name">
-          <span>Dheeraj Pundir</span>
+          <span>Dheeraj Pundir</span><div class="extra-details"><span>dheeraj-p</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -797,14 +344,13 @@
             <span>26 followers</span><br />
             <span>6 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/dheeraj-p">Know More</a></button>
+          <a target="_blank" href="https://github.com/dheeraj-p"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=brain-eater>
-      <div class="card-front">
+    </div><div class="card" id=brain-eater>
+      <div class="card-front" >
         <div class="name">
-          <span>brain-eater</span>
+          <span>brain-eater</span><div class="extra-details"><span>brain-eater</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -815,14 +361,13 @@
             <span>24 followers</span><br />
             <span>0 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/brain-eater">Know More</a></button>
+          <a target="_blank" href="https://github.com/brain-eater"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=athulpram>
-      <div class="card-front">
+    </div><div class="card" id=athulpram>
+      <div class="card-front" >
         <div class="name">
-          <span>athulpram</span>
+          <span>athulpram</span><div class="extra-details"><span>athulpram</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -833,14 +378,13 @@
             <span>18 followers</span><br />
             <span>9 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/athulpram">Know More</a></button>
+          <a target="_blank" href="https://github.com/athulpram"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=anupingale>
-      <div class="card-front">
+    </div><div class="card" id=anupingale>
+      <div class="card-front" >
         <div class="name">
-          <span>Annapurna</span>
+          <span>Annapurna</span><div class="extra-details"><span>anupingale</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -851,14 +395,13 @@
             <span>21 followers</span><br />
             <span>43 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/anupingale">Know More</a></button>
+          <a target="_blank" href="https://github.com/anupingale"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=luckyganesh>
-      <div class="card-front">
+    </div><div class="card" id=luckyganesh>
+      <div class="card-front" >
         <div class="name">
-          <span>Sai Ganesh</span>
+          <span>Sai Ganesh</span><div class="extra-details"><span>luckyganesh</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -869,14 +412,13 @@
             <span>27 followers</span><br />
             <span>47 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/luckyganesh">Know More</a></button>
+          <a target="_blank" href="https://github.com/luckyganesh"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=rishabghosh>
-      <div class="card-front">
+    </div><div class="card" id=rishabghosh>
+      <div class="card-front" >
         <div class="name">
-          <span>Rishab Ghosh</span>
+          <span>Rishab Ghosh</span><div class="extra-details"><span>rishabghosh</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -887,14 +429,13 @@
             <span>22 followers</span><br />
             <span>33 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/rishabghosh">Know More</a></button>
+          <a target="_blank" href="https://github.com/rishabghosh"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=luciferankon>
-      <div class="card-front">
+    </div><div class="card" id=luciferankon>
+      <div class="card-front" >
         <div class="name">
-          <span>Ankon Chakraborty</span>
+          <span>Ankon Chakraborty</span><div class="extra-details"><span>luciferankon</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -905,14 +446,13 @@
             <span>24 followers</span><br />
             <span>7 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/luciferankon">Know More</a></button>
+          <a target="_blank" href="https://github.com/luciferankon"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=heerajoshi>
-      <div class="card-front">
+    </div><div class="card" id=heerajoshi>
+      <div class="card-front" >
         <div class="name">
-          <span>heerajoshi</span>
+          <span>heerajoshi</span><div class="extra-details"><span>heerajoshi</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -923,14 +463,13 @@
             <span>20 followers</span><br />
             <span>30 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/heerajoshi">Know More</a></button>
+          <a target="_blank" href="https://github.com/heerajoshi"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=vprince001>
-      <div class="card-front">
+    </div><div class="card" id=vprince001>
+      <div class="card-front" >
         <div class="name">
-          <span>vprince001</span>
+          <span>vprince001</span><div class="extra-details"><span>vprince001</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -941,14 +480,13 @@
             <span>26 followers</span><br />
             <span>27 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/vprince001">Know More</a></button>
+          <a target="_blank" href="https://github.com/vprince001"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=deepikabartwal>
-      <div class="card-front">
+    </div><div class="card" id=deepikabartwal>
+      <div class="card-front" >
         <div class="name">
-          <span>Deepika Bartwal</span>
+          <span>Deepika Bartwal</span><div class="extra-details"><span>deepikabartwal</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -959,15 +497,13 @@
             <span>22 followers</span><br />
             <span>37 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/deepikabartwal">Know
-              More</a></button>
+          <a target="_blank" href="https://github.com/deepikabartwal"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=swagatachakraborty>
-      <div class="card-front">
+    </div><div class="card" id=swagatachakraborty>
+      <div class="card-front" >
         <div class="name">
-          <span>Swagata Chakraborty</span>
+          <span>Swagata Chakraborty</span><div class="extra-details"><span>swagatachakraborty</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -978,15 +514,13 @@
             <span>20 followers</span><br />
             <span>16 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/swagatachakraborty">Know
-              More</a></button>
+          <a target="_blank" href="https://github.com/swagatachakraborty"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=moumitaguri>
-      <div class="card-front">
+    </div><div class="card" id=moumitaguri>
+      <div class="card-front" >
         <div class="name">
-          <span>moumitaguri</span>
+          <span>moumitaguri</span><div class="extra-details"><span>moumitaguri</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -997,14 +531,13 @@
             <span>8 followers</span><br />
             <span>6 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/moumitaguri">Know More</a></button>
+          <a target="_blank" href="https://github.com/moumitaguri"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=tushartambe>
-      <div class="card-front">
+    </div><div class="card" id=tushartambe>
+      <div class="card-front" >
         <div class="name">
-          <span>Tushar Tambe</span>
+          <span>Tushar Tambe</span><div class="extra-details"><span>tushartambe</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1015,14 +548,13 @@
             <span>10 followers</span><br />
             <span>14 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/tushartambe">Know More</a></button>
+          <a target="_blank" href="https://github.com/tushartambe"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=sgauravk>
-      <div class="card-front">
+    </div><div class="card" id=sgauravk>
+      <div class="card-front" >
         <div class="name">
-          <span>sgauravk</span>
+          <span>sgauravk</span><div class="extra-details"><span>sgauravk</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1033,14 +565,13 @@
             <span>12 followers</span><br />
             <span>5 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/sgauravk">Know More</a></button>
+          <a target="_blank" href="https://github.com/sgauravk"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=akankshakutal>
-      <div class="card-front">
+    </div><div class="card" id=akankshakutal>
+      <div class="card-front" >
         <div class="name">
-          <span>akankshakutal</span>
+          <span>akankshakutal</span><div class="extra-details"><span>akankshakutal</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1051,15 +582,13 @@
             <span>15 followers</span><br />
             <span>20 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/akankshakutal">Know
-              More</a></button>
+          <a target="_blank" href="https://github.com/akankshakutal"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=namankrs>
-      <div class="card-front">
+    </div><div class="card" id=namankrs>
+      <div class="card-front" >
         <div class="name">
-          <span>namankrs</span>
+          <span>namankrs</span><div class="extra-details"><span>namankrs</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1070,14 +599,13 @@
             <span>16 followers</span><br />
             <span>15 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/namankrs">Know More</a></button>
+          <a target="_blank" href="https://github.com/namankrs"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=maheshsovani>
-      <div class="card-front">
+    </div><div class="card" id=maheshsovani>
+      <div class="card-front" >
         <div class="name">
-          <span>maheshsovani</span>
+          <span>maheshsovani</span><div class="extra-details"><span>maheshsovani</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1088,14 +616,13 @@
             <span>9 followers</span><br />
             <span>1 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/maheshsovani">Know More</a></button>
+          <a target="_blank" href="https://github.com/maheshsovani"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=sumandeepak8>
-      <div class="card-front">
+    </div><div class="card" id=sumandeepak8>
+      <div class="card-front" >
         <div class="name">
-          <span>sumandeepak8</span>
+          <span>sumandeepak8</span><div class="extra-details"><span>sumandeepak8</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1106,14 +633,13 @@
             <span>8 followers</span><br />
             <span>9 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/sumandeepak8">Know More</a></button>
+          <a target="_blank" href="https://github.com/sumandeepak8"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=nooranasrin>
-      <div class="card-front">
+    </div><div class="card" id=nooranasrin>
+      <div class="card-front" >
         <div class="name">
-          <span>Noora Nasrin</span>
+          <span>Noora Nasrin</span><div class="extra-details"><span>nooranasrin</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1124,14 +650,13 @@
             <span>16 followers</span><br />
             <span>18 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/nooranasrin">Know More</a></button>
+          <a target="_blank" href="https://github.com/nooranasrin"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=rey-vthi>
-      <div class="card-front">
+    </div><div class="card" id=rey-vthi>
+      <div class="card-front" >
         <div class="name">
-          <span>rey-vthi</span>
+          <span>rey-vthi</span><div class="extra-details"><span>rey-vthi</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1142,14 +667,13 @@
             <span>17 followers</span><br />
             <span>24 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/rey-vthi">Know More</a></button>
+          <a target="_blank" href="https://github.com/rey-vthi"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=anil-muraleedharan>
-      <div class="card-front">
+    </div><div class="card" id=anil-muraleedharan>
+      <div class="card-front" >
         <div class="name">
-          <span>anilmuraleedharan</span>
+          <span>anilmuraleedharan</span><div class="extra-details"><span>anil-muraleedharan</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1160,15 +684,13 @@
             <span>26 followers</span><br />
             <span>41 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/anil-muraleedharan">Know
-              More</a></button>
+          <a target="_blank" href="https://github.com/anil-muraleedharan"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=photongupta>
-      <div class="card-front">
+    </div><div class="card" id=photongupta>
+      <div class="card-front" >
         <div class="name">
-          <span>Rashmi Gupta</span>
+          <span>Rashmi Gupta</span><div class="extra-details"><span>photongupta</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1179,14 +701,13 @@
             <span>16 followers</span><br />
             <span>21 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/photongupta">Know More</a></button>
+          <a target="_blank" href="https://github.com/photongupta"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=Neha-sanserwal>
-      <div class="card-front">
+    </div><div class="card" id=Neha-sanserwal>
+      <div class="card-front" >
         <div class="name">
-          <span>Neha Sanserwal</span>
+          <span>Neha Sanserwal</span><div class="extra-details"><span>Neha-sanserwal</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1197,15 +718,13 @@
             <span>18 followers</span><br />
             <span>1 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/Neha-sanserwal">Know
-              More</a></button>
+          <a target="_blank" href="https://github.com/Neha-sanserwal"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=satheesh-chandran>
-      <div class="card-front">
+    </div><div class="card" id=satheesh-chandran>
+      <div class="card-front" >
         <div class="name">
-          <span>satheesh .c</span>
+          <span>satheesh .c</span><div class="extra-details"><span>satheesh-chandran</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1216,15 +735,13 @@
             <span>9 followers</span><br />
             <span>6 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/satheesh-chandran">Know
-              More</a></button>
+          <a target="_blank" href="https://github.com/satheesh-chandran"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=bugdriver>
-      <div class="card-front">
+    </div><div class="card" id=bugdriver>
+      <div class="card-front" >
         <div class="name">
-          <span>Rajat Kushwaha</span>
+          <span>Rajat Kushwaha</span><div class="extra-details"><span>bugdriver</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1232,17 +749,16 @@
           <span class="username">bugdriver</span>
           <p class="githubDetails">
             <span>5 repositories</span><br />
-            <span>17 followers</span><br />
+            <span>18 followers</span><br />
             <span>6 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/bugdriver">Know More</a></button>
+          <a target="_blank" href="https://github.com/bugdriver"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=anujachaitanya>
-      <div class="card-front">
+    </div><div class="card" id=anujachaitanya>
+      <div class="card-front" >
         <div class="name">
-          <span>anujachaitanya</span>
+          <span>anujachaitanya</span><div class="extra-details"><span>anujachaitanya</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1253,15 +769,13 @@
             <span>17 followers</span><br />
             <span>19 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/anujachaitanya">Know
-              More</a></button>
+          <a target="_blank" href="https://github.com/anujachaitanya"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=apurvagurme>
-      <div class="card-front">
+    </div><div class="card" id=apurvagurme>
+      <div class="card-front" >
         <div class="name">
-          <span>apurvagurme</span>
+          <span>apurvagurme</span><div class="extra-details"><span>apurvagurme</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1272,14 +786,13 @@
             <span>15 followers</span><br />
             <span>17 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/apurvagurme">Know More</a></button>
+          <a target="_blank" href="https://github.com/apurvagurme"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=drishya-dobriyal>
-      <div class="card-front">
+    </div><div class="card" id=drishya-dobriyal>
+      <div class="card-front" >
         <div class="name">
-          <span>drishya-dobriyal</span>
+          <span>drishya-dobriyal</span><div class="extra-details"><span>drishya-dobriyal</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1290,15 +803,13 @@
             <span>13 followers</span><br />
             <span>9 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/drishya-dobriyal">Know
-              More</a></button>
+          <a target="_blank" href="https://github.com/drishya-dobriyal"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=lazyhackerthani>
-      <div class="card-front">
+    </div><div class="card" id=lazyhackerthani>
+      <div class="card-front" >
         <div class="name">
-          <span>thanya geetha santhosh</span>
+          <span>thanya geetha santhosh</span><div class="extra-details"><span>lazyhackerthani</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1309,15 +820,13 @@
             <span>17 followers</span><br />
             <span>33 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/lazyhackerthani">Know
-              More</a></button>
+          <a target="_blank" href="https://github.com/lazyhackerthani"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=bernie-walker>
-      <div class="card-front">
+    </div><div class="card" id=bernie-walker>
+      <div class="card-front" >
         <div class="name">
-          <span>Bernard Nehal D'Cunha</span>
+          <span>Bernard Nehal D'Cunha</span><div class="extra-details"><span>bernie-walker</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1328,15 +837,13 @@
             <span>17 followers</span><br />
             <span>20 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/bernie-walker">Know
-              More</a></button>
+          <a target="_blank" href="https://github.com/bernie-walker"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=sravani-labala>
-      <div class="card-front">
+    </div><div class="card" id=sravani-labala>
+      <div class="card-front" >
         <div class="name">
-          <span>Sravani Labala</span>
+          <span>Sravani Labala</span><div class="extra-details"><span>sravani-labala</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1347,15 +854,13 @@
             <span>27 followers</span><br />
             <span>43 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/sravani-labala">Know
-              More</a></button>
+          <a target="_blank" href="https://github.com/sravani-labala"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=symbiote-ux>
-      <div class="card-front">
+    </div><div class="card" id=symbiote-ux>
+      <div class="card-front" >
         <div class="name">
-          <span>Saurabh Chauhan</span>
+          <span>Saurabh Chauhan</span><div class="extra-details"><span>symbiote-ux</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1366,14 +871,13 @@
             <span>19 followers</span><br />
             <span>30 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/symbiote-ux">Know More</a></button>
+          <a target="_blank" href="https://github.com/symbiote-ux"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=bsanthoshkumar>
-      <div class="card-front">
+    </div><div class="card" id=bsanthoshkumar>
+      <div class="card-front" >
         <div class="name">
-          <span>Santhosh</span>
+          <span>Santhosh</span><div class="extra-details"><span>bsanthoshkumar</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1384,15 +888,13 @@
             <span>10 followers</span><br />
             <span>12 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/bsanthoshkumar">Know
-              More</a></button>
+          <a target="_blank" href="https://github.com/bsanthoshkumar"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=naveen-kumar-vadla>
-      <div class="card-front">
+    </div><div class="card" id=naveen-kumar-vadla>
+      <div class="card-front" >
         <div class="name">
-          <span>naveen kumar</span>
+          <span>naveen kumar</span><div class="extra-details"><span>naveen-kumar-vadla</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1403,15 +905,13 @@
             <span>24 followers</span><br />
             <span>40 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/naveen-kumar-vadla">Know
-              More</a></button>
+          <a target="_blank" href="https://github.com/naveen-kumar-vadla"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=myultimatevision>
-      <div class="card-front">
+    </div><div class="card" id=myultimatevision>
+      <div class="card-front" >
         <div class="name">
-          <span>Nagendra Sai</span>
+          <span>Nagendra Sai</span><div class="extra-details"><span>myultimatevision</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1422,15 +922,13 @@
             <span>9 followers</span><br />
             <span>8 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/myultimatevision">Know
-              More</a></button>
+          <a target="_blank" href="https://github.com/myultimatevision"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=imvaishu>
-      <div class="card-front">
+    </div><div class="card" id=imvaishu>
+      <div class="card-front" >
         <div class="name">
-          <span>Vaishnavi Yadav</span>
+          <span>Vaishnavi Yadav</span><div class="extra-details"><span>imvaishu</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1441,14 +939,13 @@
             <span>14 followers</span><br />
             <span>14 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/imvaishu">Know More</a></button>
+          <a target="_blank" href="https://github.com/imvaishu"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=desibabua>
-      <div class="card-front">
+    </div><div class="card" id=desibabua>
+      <div class="card-front" >
         <div class="name">
-          <span>Ayush kumar</span>
+          <span>Ayush kumar</span><div class="extra-details"><span>desibabua</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1459,14 +956,13 @@
             <span>20 followers</span><br />
             <span>38 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/desibabua">Know More</a></button>
+          <a target="_blank" href="https://github.com/desibabua"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=bcalm>
-      <div class="card-front">
+    </div><div class="card" id=bcalm>
+      <div class="card-front" >
         <div class="name">
-          <span>Vikram Singh</span>
+          <span>Vikram Singh</span><div class="extra-details"><span>bcalm</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1477,14 +973,13 @@
             <span>15 followers</span><br />
             <span>5 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/bcalm">Know More</a></button>
+          <a target="_blank" href="https://github.com/bcalm"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=shankarbyageli>
-      <div class="card-front">
+    </div><div class="card" id=shankarbyageli>
+      <div class="card-front" >
         <div class="name">
-          <span>Shankar Byageli</span>
+          <span>Shankar Byageli</span><div class="extra-details"><span>shankarbyageli</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1492,18 +987,16 @@
           <span class="username">shankarbyageli</span>
           <p class="githubDetails">
             <span>4 repositories</span><br />
-            <span>16 followers</span><br />
+            <span>17 followers</span><br />
             <span>16 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/shankarbyageli">Know
-              More</a></button>
+          <a target="_blank" href="https://github.com/shankarbyageli"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=melodyni>
-      <div class="card-front">
+    </div><div class="card" id=melodyni>
+      <div class="card-front" >
         <div class="name">
-          <span>RK</span>
+          <span>RK</span><div class="extra-details"><span>melodyni</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1514,14 +1007,13 @@
             <span>14 followers</span><br />
             <span>2 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/melodyni">Know More</a></button>
+          <a target="_blank" href="https://github.com/melodyni"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=abhilashkasula>
-      <div class="card-front">
+    </div><div class="card" id=abhilashkasula>
+      <div class="card-front" >
         <div class="name">
-          <span>Abhilash Kasula</span>
+          <span>Abhilash Kasula</span><div class="extra-details"><span>abhilashkasula</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1532,15 +1024,13 @@
             <span>11 followers</span><br />
             <span>1 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/abhilashkasula">Know
-              More</a></button>
+          <a target="_blank" href="https://github.com/abhilashkasula"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=dad-ka-raneesa>
-      <div class="card-front">
+    </div><div class="card" id=dad-ka-raneesa>
+      <div class="card-front" >
         <div class="name">
-          <span>dad love❤️</span>
+          <span>dad love❤️</span><div class="extra-details"><span>dad-ka-raneesa</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1551,15 +1041,13 @@
             <span>19 followers</span><br />
             <span>40 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/dad-ka-raneesa">Know
-              More</a></button>
+          <a target="_blank" href="https://github.com/dad-ka-raneesa"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=shiviraj>
-      <div class="card-front">
+    </div><div class="card" id=shiviraj>
+      <div class="card-front" >
         <div class="name">
-          <span>Shivam Rajput</span>
+          <span>Shivam Rajput</span><div class="extra-details"><span>shiviraj</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1570,14 +1058,13 @@
             <span>24 followers</span><br />
             <span>48 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/shiviraj">Know More</a></button>
+          <a target="_blank" href="https://github.com/shiviraj"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=cricket-lover>
-      <div class="card-front">
+    </div><div class="card" id=cricket-lover>
+      <div class="card-front" >
         <div class="name">
-          <span>phaneendra</span>
+          <span>phaneendra</span><div class="extra-details"><span>cricket-lover</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1588,15 +1075,13 @@
             <span>10 followers</span><br />
             <span>1 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/cricket-lover">Know
-              More</a></button>
+          <a target="_blank" href="https://github.com/cricket-lover"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=palpriyanshu>
-      <div class="card-front">
+    </div><div class="card" id=palpriyanshu>
+      <div class="card-front" >
         <div class="name">
-          <span>palpriyanshu</span>
+          <span>palpriyanshu</span><div class="extra-details"><span>palpriyanshu</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1607,14 +1092,13 @@
             <span>14 followers</span><br />
             <span>40 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/palpriyanshu">Know More</a></button>
+          <a target="_blank" href="https://github.com/palpriyanshu"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=unphydra>
-      <div class="card-front">
+    </div><div class="card" id=unphydra>
+      <div class="card-front" >
         <div class="name">
-          <span>Rivu Layek</span>
+          <span>Rivu Layek</span><div class="extra-details"><span>unphydra</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1625,14 +1109,13 @@
             <span>26 followers</span><br />
             <span>39 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/unphydra">Know More</a></button>
+          <a target="_blank" href="https://github.com/unphydra"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=venkybavisetti>
-      <div class="card-front">
+    </div><div class="card" id=venkybavisetti>
+      <div class="card-front" >
         <div class="name">
-          <span>venkatesh bavisetti</span>
+          <span>venkatesh bavisetti</span><div class="extra-details"><span>venkybavisetti</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1643,15 +1126,13 @@
             <span>22 followers</span><br />
             <span>33 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/venkybavisetti">Know
-              More</a></button>
+          <a target="_blank" href="https://github.com/venkybavisetti"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=rahitkar>
-      <div class="card-front">
+    </div><div class="card" id=rahitkar>
+      <div class="card-front" >
         <div class="name">
-          <span>Winterfell</span>
+          <span>Winterfell</span><div class="extra-details"><span>rahitkar</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1662,14 +1143,13 @@
             <span>19 followers</span><br />
             <span>25 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/rahitkar">Know More</a></button>
+          <a target="_blank" href="https://github.com/rahitkar"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=mildshower>
-      <div class="card-front">
+    </div><div class="card" id=mildshower>
+      <div class="card-front" >
         <div class="name">
-          <span>Sudipta Kundu</span>
+          <span>Sudipta Kundu</span><div class="extra-details"><span>mildshower</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1680,14 +1160,13 @@
             <span>27 followers</span><br />
             <span>29 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/mildshower">Know More</a></button>
+          <a target="_blank" href="https://github.com/mildshower"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=gulsane>
-      <div class="card-front">
+    </div><div class="card" id=gulsane>
+      <div class="card-front" >
         <div class="name">
-          <span>gulsane</span>
+          <span>gulsane</span><div class="extra-details"><span>gulsane</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1698,14 +1177,13 @@
             <span>9 followers</span><br />
             <span>7 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/gulsane">Know More</a></button>
+          <a target="_blank" href="https://github.com/gulsane"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=pssruthy>
-      <div class="card-front">
+    </div><div class="card" id=pssruthy>
+      <div class="card-front" >
         <div class="name">
-          <span>Sruthy P S</span>
+          <span>Sruthy P S</span><div class="extra-details"><span>pssruthy</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1716,14 +1194,13 @@
             <span>26 followers</span><br />
             <span>39 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/pssruthy">Know More</a></button>
+          <a target="_blank" href="https://github.com/pssruthy"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=trinangkur>
-      <div class="card-front">
+    </div><div class="card" id=trinangkur>
+      <div class="card-front" >
         <div class="name">
-          <span>Trinangkur Chatterjee</span>
+          <span>Trinangkur Chatterjee</span><div class="extra-details"><span>trinangkur</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1731,17 +1208,16 @@
           <span class="username">trinangkur</span>
           <p class="githubDetails">
             <span>2 repositories</span><br />
-            <span>15 followers</span><br />
+            <span>14 followers</span><br />
             <span>4 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/trinangkur">Know More</a></button>
+          <a target="_blank" href="https://github.com/trinangkur"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=armanaaquib>
-      <div class="card-front">
+    </div><div class="card" id=armanaaquib>
+      <div class="card-front" >
         <div class="name">
-          <span>AAQUIB EQUBAL</span>
+          <span>AAQUIB EQUBAL</span><div class="extra-details"><span>armanaaquib</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1750,16 +1226,15 @@
           <p class="githubDetails">
             <span>10 repositories</span><br />
             <span>16 followers</span><br />
-            <span>6 following</span>
+            <span>7 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/armanaaquib">Know More</a></button>
+          <a target="_blank" href="https://github.com/armanaaquib"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-    <div class="card" id=sukhiboi>
-      <div class="card-front">
+    </div><div class="card" id=sukhiboi>
+      <div class="card-front" >
         <div class="name">
-          <span>sukhiboi</span>
+          <span>sukhiboi</span><div class="extra-details"><span>sukhiboi</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -1770,34 +1245,7 @@
             <span>14 followers</span><br />
             <span>8 following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="https://github.com/sukhiboi">Know More</a></button>
+          <a target="_blank" href="https://github.com/sukhiboi"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
-    </div>
-  </div>
-  <script>const search = function (searchString) {
-      const users = document.getElementsByClassName("card");
-      const usernames = Object.keys(users).map((user, index) => {
-        return users[index].id;
-      });
-      const filteredUsers = usernames.filter(user => {
-        const searchRegex = new RegExp(`^${searchString}`);
-        return user.match(searchRegex);
-      });
-      usernames.forEach(user => {
-        const currentUser = document.getElementById(user);
-        currentUser.classList.add("hide");
-      });
-      filteredUsers.forEach(user => {
-        const currentUser = document.getElementById(user);
-        currentUser.classList.remove("hide");
-      });
-    };
-    const searchBar = document.getElementById("searchBar");
-    searchBar.addEventListener("input", () => {
-      search(event.target.value);
-    });
-</script>
-</body>
-
-</html>
+    </div></div><script>const search = function (searchString) { const users = document.getElementsByClassName("card"); const usernames = Object.keys(users).map((user, index) => { return users[index].id; }); const filteredUsers = usernames.filter((user) => { const searchRegex = new RegExp(`^${searchString}`); return user.match(searchRegex); }); usernames.forEach((user) => { const currentUser = document.getElementById(user); currentUser.classList.add("hide"); }); filteredUsers.forEach((user) => { const currentUser = document.getElementById(user); currentUser.classList.remove("hide"); }); }; const searchBar = document.getElementById("searchBar"); searchBar.addEventListener("input", () => { search(event.target.value) });</script></body> </html>

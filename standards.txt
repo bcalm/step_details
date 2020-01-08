@@ -1,6 +1,0 @@
-Font: Montserrat [Google Font]
-  link: https://fonts.googleapis.com/css?family=Montserrat&display=swap
-
-Headings:
-  Large: 32px
-  Medium: 25px

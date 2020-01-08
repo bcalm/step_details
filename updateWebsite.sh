@@ -1,0 +1,1 @@
+cd resources && node repositories.js $1 $2 && cd .. && node resources/htmlParser.js && echo "Website Updated"

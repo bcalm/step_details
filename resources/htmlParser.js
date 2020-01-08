@@ -17,7 +17,7 @@ const simpleVersionData = githubData.map(user => {
 const script = 'const search = function (searchString) { const users = document.getElementsByClassName("card"); const usernames = Object.keys(users).map((user, index) => { return users[index].id; }); const filteredUsers = usernames.filter((user) => { const searchRegex = new RegExp(`^${searchString}`); return user.match(searchRegex); }); usernames.forEach((user) => { const currentUser = document.getElementById(user); currentUser.classList.add("hide"); }); filteredUsers.forEach((user) => { const currentUser = document.getElementById(user); currentUser.classList.remove("hide"); }); }; const searchBar = document.getElementById("searchBar"); searchBar.addEventListener("input", () => { search(event.target.value) });';
 
 let styles =
-  'body {background-color: rgba(0, 0, 0, 0.01);font-family: Montserrat !important;margin: 0;}.hide {display: none;}.flex {height: 100vh;width: 100vw;margin: 10px !important;display: flex;flex-wrap: wrap;justify-content: flex-start;}.card {position: relative;margin: 10px;width: 264px;height: 410px;overflow: hidden;border-radius: 10px;box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);}.card-front {height: inherit;width: inherit;position: absolute;background-repeat: no-repeat;background-size: cover;opacity: 1;transition: 0.5s opacity, box-shadow ease-in-out;}.name {position: relative;top: 85%;text-align: center;font-weight: 900;color: #fff;font-size: 20px;}.card-back {text-align: center;height: inherit;width: inherit;position: absolute;border-radius: 10px;opacity: 0;background: rgba(0, 0, 0, 0.7);box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);transition: 0.5s opacity, box-shadow ease-in-out;}.content {padding: 84px 0 40px 0;margin: 0;text-align: center;color: #fff;}.username {font-size: 20px;font-weight: 900;}.githubDetails {padding: 20px 0;text-align: center;}.githubDetails > span {line-height: 1.6;padding: 5px 0;font-size: 18px;color: #fff;text-transform: capitalize;}.know-more-btn {text-align: center;outline: 0;padding: 10px 30px;border-radius: 10px;background: 0 0;border: 2px solid #fff;color: #fff;font-size: 15px;font-weight: 500;transition: color, background 0.2s ease-in-out;}.know-more-btn > a {text-decoration: none;color: inherit;}.know-more-btn:hover {cursor: pointer;background: #fff;color: rgba(0, 0, 0, 0.7);transition: color, background 0.2s ease-in-out;}.card:hover .card-front {opacity: 0;transition: 0.5s opacity, box-shadow ease-in-out;}.card:hover .card-back {opacity: 1;transition: 0.5s opacity, box-shadow ease-in-out;}.header {text-align: center;padding: 30px 0 10px 0;}.search-bar {padding: 5px 10px;font-size: 20px;border: none;border-bottom: 1px solid rgba(0, 0, 0, 0.5);background: 0 0;outline: none;}'.toString();
+  'body {background-color: rgba(0, 0, 0, 0.01);font-family: Montserrat !important;margin: 0;}.hide {display: none;}.flex {height: 100vh;width: 100vw;margin: 10px !important;display: flex;flex-wrap: wrap;justify-content: flex-start;}.card {position: relative;margin: 10px;width: 264px;height: 410px;overflow: hidden;border-radius: 10px;box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);}.card-front {height: inherit;width: inherit;position: absolute;background-repeat: no-repeat;background-size: cover;opacity: 1;transition: 0.5s opacity, box-shadow ease-in-out;}.name {position: relative; top: 74%; line-height: 1.5;text-align: center;font-weight: 900;color: #fff;font-size: 20px;} .extra-details {line-height: 1.4} .extra-details > span {font-weight: 100; font-size: 14px; line-height:1.4}.card-back {text-align: center;height: inherit;width: inherit;position: absolute;border-radius: 10px;opacity: 0;background: rgba(0, 0, 0, 0.7);box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);transition: 0.5s opacity, box-shadow ease-in-out;}.content {padding: 84px 0 40px 0;margin: 0;text-align: center;color: #fff;}.username {font-size: 20px;font-weight: 900;}.githubDetails {padding: 20px 0;text-align: center;}.githubDetails > span {line-height: 1.6;padding: 5px 0;font-size: 18px;color: #fff;text-transform: capitalize;}.know-more-btn {text-align: center;outline: 0;padding: 10px 30px;border-radius: 10px;background: 0 0;border: 2px solid #fff;color: #fff;font-size: 15px;font-weight: 500;transition: color, background 0.2s ease-in-out;}.know-more-btn > a {text-decoration: none;color: inherit;}.know-more-btn:hover {cursor: pointer;background: #fff;color: rgba(0, 0, 0, 0.7);transition: color, background 0.2s ease-in-out;}.card:hover .card-front {opacity: 0;transition: 0.5s opacity, box-shadow ease-in-out;}.card:hover .card-back {opacity: 1;transition: 0.5s opacity, box-shadow ease-in-out;}.header {text-align: center;padding: 30px 0 10px 0;}.search-bar {padding: 5px 10px; font-size: 20px; border: none; border-bottom: 1px solid rgba(0, 0, 0, 0.1); background: 0 0; outline: none; font-weight: 700; color: rgba(0, 0, 0, 0.6);}'.toString();
 
 let cards = '';
 
@@ -26,7 +26,7 @@ simpleVersionData.forEach(data => {
   cards = cards + `<div class="card" id=${data.username}>
       <div class="card-front" >
         <div class="name">
-          <span>${name}</span>
+          <span>${name}</span><div class="extra-details"><span>${data.username}</span></div>
         </div>
       </div>
       <div class="card-back">
@@ -37,7 +37,7 @@ simpleVersionData.forEach(data => {
             <span>${data.followers} followers</span><br />
             <span>${data.following} following</span>
           </p>
-          <button class="know-more-btn"><a target="_blank" href="${data.url}">Know More</a></button>
+          <a target="_blank" href="${data.url}"><button class="know-more-btn">Know More</button></a>
         </p>
       </div>
     </div>`;
@@ -49,7 +49,7 @@ const head = `<head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
-  <title>Home</title>
+  <title>Github User Data</title>
   <style> ${styles} </style>
   </head>`;
 

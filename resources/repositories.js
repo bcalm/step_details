@@ -76,9 +76,12 @@ const userName = [
   "sukhiboi"
 ];
 
+const currentUser = process.argv[2];
+const key = process.argv[3];
+
 userName.forEach(link => {
   child(
-    `curl -u sukhiboi:1ec12815c0ff48a118ac484d5a7aa04802d84855  https://api.github.com/users/${link} > ${link}.txt`
+    `curl -u ${currentUser}:${key}  https://api.github.com/users/${link} > ${link}.txt`
   );
 });
 
