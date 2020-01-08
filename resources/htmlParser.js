@@ -14,16 +14,19 @@ const simpleVersionData = githubData.map(user => {
   }
 });
 
+const script = 'const search = function (searchString) { const users = document.getElementsByClassName("card"); const usernames = Object.keys(users).map((user, index) => { return users[index].id; }); const filteredUsers = usernames.filter((user) => { const searchRegex = new RegExp(`^${searchString}`); return user.match(searchRegex); }); usernames.forEach((user) => { const currentUser = document.getElementById(user); currentUser.classList.add("hide"); }); filteredUsers.forEach((user) => { const currentUser = document.getElementById(user); currentUser.classList.remove("hide"); }); }; const searchBar = document.getElementById("searchBar"); searchBar.addEventListener("input", () => { search(event.target.value) });';
+
 let styles =
-  'body{background-color:rgba(0,0,0,.01);font-family:Montserrat!important;margin:0}.flex{height:100vh;width:100vw;margin:10px!important;display:flex;flex-wrap:wrap;justify-content:flex-start}.card{position:relative;margin:10px;width:264px;height:410px;overflow:hidden;border-radius:10px}.card-front{height:inherit;width:inherit;position:absolute;background-repeat:no-repeat;background-size:cover;opacity:1;transition:.5s opacity,box-shadow ease-in-out}.name{position:relative;top:85%;text-align:center;font-weight:900;color:#fff;font-size:20px}.card-back{text-align:center;height:inherit;width:inherit;position:absolute;border-radius:10px;opacity:0;background:rgba(44,43,255,.7);box-shadow:0 0 10px 10px rgba(0,0,0,.2);transition:.5s opacity,box-shadow ease-in-out}.content{padding:84px 0 40px 0;margin:0;text-align:center;color:#fff}.username{font-size:20px;font-weight:900}.githubDetails{padding:20px 0;text-align:center}.githubDetails>span{line-height:1.6;padding:5px 0;font-size:18px;color:#fff;text-transform:capitalize}.know-more-btn{text-align:center;outline:0;padding:10px 30px;border-radius:10px;background:0 0;border:2px solid #fff;color:#fff;font-size:15px;font-weight:500;transition:color,background .2s ease-in-out}.know-more-btn>a{text-decoration:none;color:inherit}.know-more-btn:hover{cursor:pointer;background:#fff;color:rgba(44,43,255,.7);transition:color,background .2s ease-in-out}.card:hover .card-front{opacity:0;transition:.5s opacity,box-shadow ease-in-out}.card:hover .card-back{opacity:1;transition:.5s opacity,box-shadow ease-in-out}'.toString();
+  'body{background-color:rgba(0,0,0,.01);font-family:Montserrat!important;margin:0}.hide{display:none}.flex{height:100vh;width:100vw;margin:10px!important;display:flex;flex-wrap:wrap;justify-content:flex-start}.card{position:relative;margin:10px;width:264px;height:410px;overflow:hidden;border-radius:10px}.card-front{height:inherit;width:inherit;position:absolute;background-repeat:no-repeat;background-size:cover;opacity:1;transition:.5s opacity,box-shadow ease-in-out}.name{position:relative;top:85%;text-align:center;font-weight:900;color:#fff;font-size:20px}.card-back{text-align:center;height:inherit;width:inherit;position:absolute;border-radius:10px;opacity:0;background:rgba(44,43,255,.7);box-shadow:0 0 10px 10px rgba(0,0,0,.2);transition:.5s opacity,box-shadow ease-in-out}.content{padding:84px 0 40px 0;margin:0;text-align:center;color:#fff}.username{font-size:20px;font-weight:900}.githubDetails{padding:20px 0;text-align:center}.githubDetails>span{line-height:1.6;padding:5px 0;font-size:18px;color:#fff;text-transform:capitalize}.know-more-btn{text-align:center;outline:0;padding:10px 30px;border-radius:10px;background:0 0;border:2px solid #fff;color:#fff;font-size:15px;font-weight:500;transition:color,background .2s ease-in-out}.know-more-btn>a{text-decoration:none;color:inherit}.know-more-btn:hover{cursor:pointer;background:#fff;color:rgba(44,43,255,.7);transition:color,background .2s ease-in-out}.card:hover .card-front{opacity:0;transition:.5s opacity,box-shadow ease-in-out}.card:hover .card-back{opacity:1;transition:.5s opacity,box-shadow ease-in-out}.header{text-align:center;padding:30px 0 10px 0}.search-bar{padding:5px 10px;font-size:20px;border:none;border-bottom:1px solid rgba(0,0,0,.5);background:0 0;outline:none}'.toString();
 
 let cards = '';
 
 simpleVersionData.forEach(data => {
-  cards = cards + `<div class="card">
-      <div class="card-front" id=${data.username}>
+  const name = data.name || data.username;
+  cards = cards + `<div class="card" id=${data.username}>
+      <div class="card-front" >
         <div class="name">
-          <span>${data.name}</span>
+          <span>${name}</span>
         </div>
       </div>
       <div class="card-back">
@@ -38,7 +41,7 @@ simpleVersionData.forEach(data => {
         </p>
       </div>
     </div>`;
-  styles = styles + `#${data.username}{background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(${data.avatar_url});}`
+  styles = styles + `#${data.username}>.card-front {background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(44, 43, 255, 0.7) 90%), url(${data.avatar_url});}`
 });
 
 const head = `<head>
@@ -50,11 +53,7 @@ const head = `<head>
   <style> ${styles} </style>
   </head>`;
 
-const body = `<body>
-  <div class="flex">
-  ${cards}
-  </div>
-  </body>`;
+const body = `<body><div class="header"><input class="search-bar" placeholder="Search..." id="searchBar"></div><div class="flex">${cards}</div><script>${script}</script></body>`;
 
 const html = `<!DOCTYPE html>
 <html lang="en"> ${head} \n ${body} </html>`;

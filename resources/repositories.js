@@ -6,7 +6,7 @@ const userName = "nooranasrin,rey-vthi,anil-muraleedharan,photongupta,Neha-sanse
 
 userName.forEach(link => {
   child(
-    `curl -u bcalm:e240ee7da5ee28f16585b008dde6f63ce8fdb721  https://api.github.com/users/${link} > ${link}.txt`
+    `curl -u sukhiboi:301496d9cc47bf0d570c0f4e369fcf7ac4950ceb  https://api.github.com/users/${link} > ${link}.txt`
   );
 });
 
