@@ -50,7 +50,7 @@ const head = `<head>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
   <title>Github User Data</title>
-  <link href="styles/home.css" rel="stylesheet" type="text/css">
+  <link href="styles/sukhdevIndex.css" rel="stylesheet" type="text/css">
   </head>`;
 
 const body = `<body><div class="header"><input class="search-bar" placeholder="Search..." id="searchBar"></div><div class="flex">${cards}</div><script src="js/home.js"></script></body>`;
@@ -59,5 +59,5 @@ const html = `<!DOCTYPE html>
 <html lang="en"> ${head} \n ${body} </html>`;
 
 writeFileSync("./js/home.js", script, "utf8");
-writeFileSync("./styles/home.css", styles, "utf8");
-writeFileSync("./index.html", html, "utf8");
+writeFileSync("./styles/sukhdevIndex.css", styles, "utf8");
+writeFileSync("./sukhdevIndex.html", html, "utf8");
