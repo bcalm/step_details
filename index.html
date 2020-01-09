@@ -8,33 +8,8 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/index.css" type="text/css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <title>Home</title>
-  <script>
-    const mo = function (e) {
-      e.children[0].style["display"] = "none";
-      e.children[1].style["display"] = "block";
-    };
-    const mou = function (e) {
-      e.children[0].style["display"] = "block";
-      e.children[1].style["display"] = "none";
-    };
-
-    const filterUser = (user, text) => {
-      const userName = user.children[1].innerText.toLowerCase();
-      return userName.startsWith(text);
-    }
-
-
-    const searchBar = function (searchString) {
-      const text = document.getElementById('searchBox').value.toLowerCase();
-      const allUsers = Array.from(document.getElementsByClassName('user'))
-      console.log(allUsers)
-      allUsers.forEach(user => user.style.display = 'none')
-      const filteredUser = allUsers.filter(user => filterUser(user, text))
-      filteredUser.forEach(user => user.style['display'] = 'flex')
-    }
-
-  </script>
+  <title>STEP</title>
+  <script src="step.js">  </script>
 </head>
 
 <body>
