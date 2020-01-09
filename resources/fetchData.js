@@ -1,8 +1,8 @@
 const githubData = require("./step7GithubData.json");
 
 for (let i = 0; i < githubData.length; i++) {
-  console.log(` <div onmouseover="mo(this)" onmouseout="mou(this)"><div class="image">
-    <div class="imageSize">
+  console.log(` <div onmouseover="mo(this)" onmouseout="mou(this)"><div class="user">
+    <div class="image">
     <img
     src="${githubData[i]["avatar_url"]}"
     class="imgArea"
@@ -22,8 +22,11 @@ for (let i = 0; i < githubData.length; i++) {
             <li>Public repos: ${githubData[i]["public_repos"]}</li>
             <li>Private repos: ${githubData[i]["private_repos"] || "0"}</li>
             <li>Created at: ${githubData[i]["created_at"]}</li>
-            <li>Updated at at: ${githubData[i]["updated_at"]}</li>
-          </ul></p>
-    </div>
-    </div>`);
+            <input type="button" onClick="window.open('${
+    githubData[i]["html_url"]
+    }')" style="font-size: 25px" value="Know more...">
+            </ul></p>
+          </div>
+          </div>
+    `);
 }

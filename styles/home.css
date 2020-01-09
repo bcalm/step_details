@@ -1,15 +1,18 @@
-.image {
+.user {
   display: flex;
   flex-direction: column;
+  height: 500px;
   width: 350px;
   overflow: hidden;
   margin-top: 80px;
   border-top-left-radius: 19px;
   border-top-right-radius: 19px;
+  background-color: rgb(201, 290, 245);
   box-shadow: 5px 5px gray;
 }
 .description {
-  background-color: lightgray;
+  background-color: rgb(189, 255, 194);
+  height: 500px;
   display: flex;
   width: 350px;
   margin-top: 80px;
@@ -32,8 +35,8 @@
   text-align: center;
 }
 
-.imageSize {
-  height: 46vh;
+.image {
+  height: 440px;
 }
 
 .blockConfig {

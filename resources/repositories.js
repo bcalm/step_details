@@ -9,7 +9,6 @@ const userName = [
   "keerthyeb",
   "swapnillothe",
   "rahulmadaan",
-  "shubhiamchauhan",
   "affishaikh",
   "arnabghs",
   "sapanaKale",
