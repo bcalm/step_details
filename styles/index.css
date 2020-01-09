@@ -1,42 +1,40 @@
 .user {
   display: flex;
   flex-direction: column;
-  height: 500px;
-  width: 350px;
+  height: 300px;
+  width: 220px;
   overflow: hidden;
   margin-top: 80px;
-  border-top-left-radius: 19px;
-  border-top-right-radius: 19px;
-  background-color: rgb(201, 290, 245);
-  box-shadow: 5px 5px gray;
+  border-radius: 19px 19px 0px 19px;
+  box-shadow: 2px 2px 4px 0.6px rgba(0, 0, 0, 0.4);
 }
+
 .description {
-  background-color: rgb(189, 255, 194);
-  height: 500px;
+  background-image: linear-gradient(to top right, rgba(160, 160, 160, 0.5), white);
   display: flex;
-  width: 350px;
+  height: 300px;
+  width: 220px;
   margin-top: 80px;
-  font-size: 25px;
-  line-height: 40px;
-  border-top-left-radius: 19px;
-  border-top-right-radius: 19px;
-  box-shadow: 5px 5px gray;
+  font-size: 16px;
+  line-height: 25px;
+  border-radius: 19px 19px 0px 19px;
   display: none;
+  box-shadow: 5px 5px gray;
 }
 .name {
-  width: 350px;
-  height: 60px;
-  background-color: rgba(128, 128, 128, 0.28);
+  width: 220px;
+  height: 40px;
+  background-image: linear-gradient(to bottom right, rgba(80, 80, 80, 0.1), white);
   margin-top: 0px;
-  padding-top: 0px;
-  border-bottom-left-radius: 8px;
+  padding-top: 10px;
+  border-bottom-left-radius: 19px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
 }
 
 .image {
-  height: 440px;
+  height: 260px;
 }
 
 .blockConfig {
