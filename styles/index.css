@@ -51,7 +51,7 @@
 
 .header {
   margin-left: 40px;
-  width: 450px;
+  width: 65%;
   height: 150px;
 }
 
@@ -60,9 +60,6 @@
   border-radius: 10px;
   border: 1px solid rgba(104, 98, 98, 0.397);
   height: 50px;
-  width: 280px;
-  position: relative;
-  left: 70%;
   font-size: 29px;
 }
 #searchBox {
@@ -77,10 +74,10 @@
 }
 
 .top{
-  width: 800px;
   padding-top: 50px;
   display:flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 
