@@ -1,6 +1,9 @@
 const child = require("child_process").execSync;
 const fs = require("fs");
+<<<<<<< HEAD
 
+=======
+>>>>>>> a4ef14be936d2c9810d197c52f39856ec1194146
 const userName = [
   "craftybones",
   "vharidas",
@@ -76,10 +79,20 @@ const userName = [
   "armanaaquib",
   "sukhiboi"
 ];
+<<<<<<< HEAD
 
 userName.forEach(link => {
   child(
     `curl -u bcalm:9278d5f03af17b4b78353af862c3a9796b10acf1  https://api.github.com/users/${link} > ${link}.txt`
+=======
+
+const currentUser = process.argv[2];
+const key = process.argv[3];
+
+userName.forEach(link => {
+  child(
+    `curl -u ${currentUser}:${key}  https://api.github.com/users/${link} > ${link}.txt`
+>>>>>>> a4ef14be936d2c9810d197c52f39856ec1194146
   );
 });
 
