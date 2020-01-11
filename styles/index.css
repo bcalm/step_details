@@ -5,7 +5,7 @@
   width: 220px;
   overflow: hidden;
   margin-top: 80px;
-  border-radius: 19px ;
+  border-radius: 19px;
   box-shadow: 2px 2px 4px 0.6px rgba(0, 0, 0, 0.4);
 }
 
@@ -20,7 +20,7 @@
   display: none;
 }
 
-.button{
+.button {
   font-size: 2vw;
   cursor: pointer;
 }
@@ -74,7 +74,7 @@
 .searchBar {
   margin-top: 30px;
   border-radius: 10px;
-  border:  solid rgba(104, 98, 98, 0.397);
+  border: solid rgba(104, 98, 98, 0.397);
   height: 30px;
   font-size: 20px;
 }
@@ -87,15 +87,21 @@
 #searchBox:focus {
   outline: none;
 }
+#searchSuggestion {
+  font: lighter;
+  width: 200px;
+  font-size: 1vw;
+  line-height: 2vw;
+}
 
-.top{
+.top {
   padding-top: 50px;
-  display:flex;
+  display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-#menuBar{
+#menuBar {
   margin-left: 0px;
   margin-top: 33px;
   width: 30px;
@@ -113,24 +119,24 @@
   background-color: white;
   height: 3px;
 }
-.sideBar{
-  width:20vw;
+.sideBar {
+  width: 0vw;
   background-color: white;
   position: fixed;
   top: 0;
   bottom: 0;
   overflow-y: scroll;
-  display: none;
-  
+  /* display: none; */
 }
 
-.sideBarHeader{
+.sideBarHeader {
   padding-bottom: 2vw;
   font-size: 1.5vw;
   font-weight: lighter;
   font-family: sans-serif;
+  text-shadow: 2px 2px black, 8px 8px 10px lightskyblue;
   height: 6vw;
-  background-color:rgba(48, 91, 212, 0.67);
+  color: white;
 }
 
 .crossButton {
@@ -138,9 +144,8 @@
   padding-bottom: 1vw;
 }
 
-.userList{
+.userList {
   font-size: 1vw;
-  margin-top: 1vw;
   margin-left: 3vw;
   line-height: 2vw;
 }

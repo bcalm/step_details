@@ -9,7 +9,7 @@
   <script src="step.js"></script>
 </head>
 
-<body onload="createSideBar()">
+<body >
   <div class="sideBar">
     <div class="sideBarHeader">
       <div class="crossButton">
@@ -19,7 +19,7 @@
       </div>
       SOFTWARE TECHNOLOGY EXCELLENCE PROGRAMME
     </div>
-    <div class="userList"> <b>MEMBER LIST</b> </div>
+    <div class="userList"> </div>
 
   </div>
 
@@ -36,9 +36,11 @@
     </div>
 
     <div class="searchBar ">
-      <input type="search" id="searchBox" style="border:none;" oninput="searchBar(value)"> <i
-        style="cursor: pointer;padding-right: 10px;" class="fa fa-search"></i>
+        <input type="search" list="searchSuggestion"  id="searchBox" style="border:none;" oninput="searchBar(this)" autocomplete="off"> <i
+        style="cursor: pointer;padding-right: 10px;" onclick="showResult()" class="fa fa-search"></i>
+          <datalist id="searchSuggestion"></datalist>
     </div>
+
   </div>
 
   <div class="container">

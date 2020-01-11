@@ -9,24 +9,47 @@ const rotateFront = function(e) {
 
 const filterUser = (user, text) => {
   const userName = user.children[1].innerText.toLowerCase();
-  return userName.startsWith(text);
+  return userName.startsWith(text.toLowerCase());
 };
 
-const searchBar = function(searchString) {
-  const text = document.getElementById("searchBox").value.toLowerCase();
-  const allUsers = Array.from(document.getElementsByClassName("user"));
-  allUsers.forEach(user => (user.style.display = "none"));
+const getAllUsers = () => Array.from(document.getElementsByClassName("user"));
+
+const searchBar = function(e) {
+  const text = e.value.toLowerCase();
+  const allUsers = getAllUsers();
   const filteredUser = allUsers.filter(user => filterUser(user, text));
-  filteredUser.forEach(user => (user.style["display"] = "flex"));
+  const matchedPeople = filteredUser.map(user => user.innerText.toUpperCase());
+  const searchSuggestion = document.getElementById("searchSuggestion");
+  searchSuggestion.innerHTML = "";
+  matchedPeople.forEach(user => {
+    const element = document.createElement("option");
+    element.setAttribute("value", user);
+    searchSuggestion.appendChild(element);
+  });
+};
+
+const showResult = function() {
+  const allUsers = getAllUsers();
+  allUsers.forEach(user => {
+    console.log(searchBox.value);
+    console.log(filterUser(user, searchBox.value));
+    if (filterUser(user, searchBox.value)) {
+      user.style.display = "flex";
+    } else {
+      user.style.display = "none";
+    }
+  });
 };
 
 const openSideBar = function(e) {
   const sideBar = document.getElementsByClassName("sideBar")[0];
-  sideBar.style["display"] = "block";
+  sideBar.style["transition"] = "width 0.1s";
+  sideBar.style.width = "20vw";
+  createSideBar();
 };
 
 const closeSideBar = function(e) {
-  document.getElementsByClassName("sideBar")[0].style.display = "none";
+  document.getElementsByClassName("sideBar")[0].style.width = "0vw";
 };
 
 const createSideBar = function() {
