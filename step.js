@@ -33,5 +33,5 @@ const createSideBar = function () {
   const list = Array.from(document.getElementsByClassName('userList'));
   const users = Array.from(document.getElementsByClassName('name'));
   const userList = users.map(user => "✪  " + user.innerText)
-  list[0].innerText += "\n" + userList.join('\n');
+  list[0].innerText += "\n" + userList.sort().join('\n');
 };
