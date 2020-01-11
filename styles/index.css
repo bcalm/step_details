@@ -20,6 +20,10 @@
   display: none;
 }
 
+.button{
+  font-size: 2vw;
+  cursor: pointer;
+}
 
 @media screen and (min-width: 601px) {
   div.description {
@@ -63,23 +67,22 @@
 
 .header {
   margin-left: 40px;
-  width: 65%;
+  width: 50%;
   height: 150px;
 }
 
 .searchBar {
   margin-top: 30px;
   border-radius: 10px;
-  border: 1px solid rgba(104, 98, 98, 0.397);
-  height: 50px;
-  font-size: 29px;
+  border:  solid rgba(104, 98, 98, 0.397);
+  height: 30px;
+  font-size: 20px;
 }
 #searchBox {
   width: 200px;
   height: 30px;
   font-size: 15px;
   border-radius: 10px;
-  margin: 10px;
 }
 #searchBox:focus {
   outline: none;
@@ -92,4 +95,52 @@
   flex-wrap: wrap;
 }
 
+#menuBar{
+  margin-left: 0px;
+  margin-top: 33px;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(194, 102, 28);
+  border-radius: 10px;
+  position: absolute;
+  left: 95%;
+}
 
+.menuBarLines {
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 20px;
+  background-color: white;
+  height: 3px;
+}
+.sideBar{
+  width:20vw;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  display: none;
+  
+}
+
+.sideBarHeader{
+  padding-bottom: 2vw;
+  font-size: 1.5vw;
+  font-weight: lighter;
+  font-family: sans-serif;
+  height: 6vw;
+  background-color:rgba(48, 91, 212, 0.67);
+}
+
+.crossButton {
+  text-align: end;
+  padding-bottom: 1vw;
+}
+
+.userList{
+  font-size: 1vwvw;
+  margin-top: 1vw;
+  margin-left: 3vw;
+  line-height: 2vw;
+}

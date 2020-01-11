@@ -2,18 +2,33 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/index.css" type="text/css" />
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <title>STEP</title>
-  <script src="step.js">  </script>
+  <script src="step.js"></script>
 </head>
 
-<body>
+<body onload="createSideBar()">
+  <div class="sideBar">
+    <div class="sideBarHeader">
+      <div class="crossButton">
+        <button onclick="closeSideBar(this)">
+          ❌
+        </button>
+      </div>
+      SOFTWARE TECHNOLOGY EXCELLENCE PROGRAMME
+    </div>
+    <div class="userList"> <b>MEMBER LIST</b> </div>
+
+  </div>
+
   <div class="top">
+    <div id="menuBar" onclick="openSideBar(this)">
+      <div class="menuBarLines"></div>
+      <div class="menuBarLines"></div>
+      <div class="menuBarLines"></div>
+    </div>
     <div class="header">
       <img class="header"
         src="https://dynamic.thoughtworks.com/landing_pages/image-4f5952b3351e98e47db3ac011017000a.png"
@@ -21,13 +36,13 @@
     </div>
 
     <div class="searchBar ">
-      <input type="search" id="searchBox" style="border:none;" oninput="searchBar(value)"> <i style="cursor: pointer;"
-        class="fa fa-search"></i>
+      <input type="search" id="searchBox" style="border:none;" oninput="searchBar(value)"> <i
+        style="cursor: pointer;padding-right: 10px;" class="fa fa-search"></i>
     </div>
   </div>
 
   <div class="container">
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars3.githubusercontent.com/u/131062?v=4" class="imgArea" alt="Srijayanth Sridhar" />
@@ -45,14 +60,14 @@
           <li>Public repos: 55</li>
           <li>Private repos: 0</li>
           <li>Created at: 2009-09-25T04:04:23Z</li>
-          <input type="button" onClick="window.open('https://github.com/craftybones')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/craftybones')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars2.githubusercontent.com/u/4221773?v=4" class="imgArea" alt="null" />
@@ -70,14 +85,13 @@
           <li>Public repos: 3</li>
           <li>Private repos: 0</li>
           <li>Created at: 2013-04-22T07:04:34Z</li>
-          <input type="button" onClick="window.open('https://github.com/vharidas')" style="font-size: 2vw"
-            value="Know more...">
+          <input type="button" onClick="window.open('https://github.com/vharidas')" class="button" value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars0.githubusercontent.com/u/15167308?v=4" class="imgArea" alt="Abhishek Gupta" />
@@ -95,14 +109,14 @@
           <li>Public repos: 54</li>
           <li>Private repos: 0</li>
           <li>Created at: 2015-10-17T05:06:35Z</li>
-          <input type="button" onClick="window.open('https://github.com/blpabhishek')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/blpabhishek')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars3.githubusercontent.com/u/44020004?v=4" class="imgArea" alt="Reshmi R S" />
@@ -120,14 +134,14 @@
           <li>Public repos: 42</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:28:37Z</li>
-          <input type="button" onClick="window.open('https://github.com/reshmisaji')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/reshmisaji')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars2.githubusercontent.com/u/44020061?v=4" class="imgArea" alt="null" />
@@ -145,14 +159,14 @@
           <li>Public repos: 25</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:30:48Z</li>
-          <input type="button" onClick="window.open('https://github.com/keerthyeb')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/keerthyeb')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars0.githubusercontent.com/u/44019530?v=4" class="imgArea" alt="null" />
@@ -170,14 +184,14 @@
           <li>Public repos: 33</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:15:19Z</li>
-          <input type="button" onClick="window.open('https://github.com/swapnillothe')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/swapnillothe')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars3.githubusercontent.com/u/44020002?v=4" class="imgArea" alt="Rahul" />
@@ -195,14 +209,14 @@
           <li>Public repos: 33</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:28:32Z</li>
-          <input type="button" onClick="window.open('https://github.com/rahulmadaan')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/rahulmadaan')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars0.githubusercontent.com/u/44019928?v=4" class="imgArea" alt="null" />
@@ -220,14 +234,14 @@
           <li>Public repos: 46</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:26:34Z</li>
-          <input type="button" onClick="window.open('https://github.com/affishaikh')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/affishaikh')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars2.githubusercontent.com/u/44019889?v=4" class="imgArea" alt="Arnab Ghosh" />
@@ -245,14 +259,13 @@
           <li>Public repos: 30</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:25:31Z</li>
-          <input type="button" onClick="window.open('https://github.com/arnabghs')" style="font-size: 2vw"
-            value="Know more...">
+          <input type="button" onClick="window.open('https://github.com/arnabghs')" class="button" value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars2.githubusercontent.com/u/44019343?v=4" class="imgArea" alt="null" />
@@ -270,14 +283,14 @@
           <li>Public repos: 9</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:09:49Z</li>
-          <input type="button" onClick="window.open('https://github.com/sapanaKale')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/sapanaKale')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars0.githubusercontent.com/u/44019459?v=4" class="imgArea" alt="Nakka Leela Prasanth" />
@@ -295,14 +308,14 @@
           <li>Public repos: 39</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:13:04Z</li>
-          <input type="button" onClick="window.open('https://github.com/leelanakka')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/leelanakka')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars1.githubusercontent.com/u/44019216?v=4" class="imgArea" alt="null" />
@@ -320,14 +333,13 @@
           <li>Public repos: 20</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:06:02Z</li>
-          <input type="button" onClick="window.open('https://github.com/mustakip')" style="font-size: 2vw"
-            value="Know more...">
+          <input type="button" onClick="window.open('https://github.com/mustakip')" class="button" value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars0.githubusercontent.com/u/44020819?v=4" class="imgArea" alt="Arif" />
@@ -345,14 +357,13 @@
           <li>Public repos: 25</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:55:48Z</li>
-          <input type="button" onClick="window.open('https://github.com/azimarif')" style="font-size: 2vw"
-            value="Know more...">
+          <input type="button" onClick="window.open('https://github.com/azimarif')" class="button" value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars1.githubusercontent.com/u/44019169?v=4" class="imgArea" alt="null" />
@@ -370,14 +381,13 @@
           <li>Public repos: 37</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:04:19Z</li>
-          <input type="button" onClick="window.open('https://github.com/bsrushti')" style="font-size: 2vw"
-            value="Know more...">
+          <input type="button" onClick="window.open('https://github.com/bsrushti')" class="button" value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars3.githubusercontent.com/u/37463477?v=4" class="imgArea" alt="null" />
@@ -395,14 +405,14 @@
           <li>Public repos: 41</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-03-17T02:37:39Z</li>
-          <input type="button" onClick="window.open('https://github.com/kukshalkanishka')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/kukshalkanishka')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars1.githubusercontent.com/u/36004266?v=4" class="imgArea" alt="null" />
@@ -420,14 +430,14 @@
           <li>Public repos: 4</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-01-31T15:23:07Z</li>
-          <input type="button" onClick="window.open('https://github.com/srijayanth')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/srijayanth')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars0.githubusercontent.com/u/44020610?v=4" class="imgArea" alt="Durga Prasad" />
@@ -445,14 +455,14 @@
           <li>Public repos: 26</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:49:20Z</li>
-          <input type="button" onClick="window.open('https://github.com/durgaprasadd')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/durgaprasadd')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars2.githubusercontent.com/u/44019996?v=4" class="imgArea" alt="null" />
@@ -470,14 +480,14 @@
           <li>Public repos: 22</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:28:17Z</li>
-          <input type="button" onClick="window.open('https://github.com/gayatrijagtap')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/gayatrijagtap')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars3.githubusercontent.com/u/22887527?v=4" class="imgArea" alt="Chandan Kumar" />
@@ -495,14 +505,14 @@
           <li>Public repos: 61</li>
           <li>Private repos: 0</li>
           <li>Created at: 2016-10-17T12:21:22Z</li>
-          <input type="button" onClick="window.open('https://github.com/cksharma11')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/cksharma11')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars3.githubusercontent.com/u/44019618?v=4" class="imgArea" alt="Dheeraj Pundir" />
@@ -520,14 +530,14 @@
           <li>Public repos: 24</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:18:06Z</li>
-          <input type="button" onClick="window.open('https://github.com/dheeraj-p')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/dheeraj-p')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars0.githubusercontent.com/u/34330361?v=4" class="imgArea" alt="null" />
@@ -545,14 +555,14 @@
           <li>Public repos: 23</li>
           <li>Private repos: 0</li>
           <li>Created at: 2017-12-07T05:36:52Z</li>
-          <input type="button" onClick="window.open('https://github.com/brain-eater')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/brain-eater')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars3.githubusercontent.com/u/44019979?v=4" class="imgArea" alt="null" />
@@ -570,14 +580,14 @@
           <li>Public repos: 21</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:27:47Z</li>
-          <input type="button" onClick="window.open('https://github.com/athulpram')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/athulpram')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars0.githubusercontent.com/u/44020027?v=4" class="imgArea" alt="Annapurna" />
@@ -595,14 +605,14 @@
           <li>Public repos: 38</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:29:33Z</li>
-          <input type="button" onClick="window.open('https://github.com/anupingale')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/anupingale')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars3.githubusercontent.com/u/44020019?v=4" class="imgArea" alt="Sai Ganesh" />
@@ -620,14 +630,14 @@
           <li>Public repos: 42</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:29:13Z</li>
-          <input type="button" onClick="window.open('https://github.com/luckyganesh')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/luckyganesh')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars1.githubusercontent.com/u/44020133?v=4" class="imgArea" alt="Rishab Ghosh" />
@@ -645,14 +655,14 @@
           <li>Public repos: 39</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:33:22Z</li>
-          <input type="button" onClick="window.open('https://github.com/rishabghosh')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/rishabghosh')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars3.githubusercontent.com/u/44019225?v=4" class="imgArea" alt="Ankon Chakraborty" />
@@ -670,14 +680,14 @@
           <li>Public repos: 57</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:06:18Z</li>
-          <input type="button" onClick="window.open('https://github.com/luciferankon')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/luciferankon')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars1.githubusercontent.com/u/44017701?v=4" class="imgArea" alt="null" />
@@ -695,14 +705,14 @@
           <li>Public repos: 20</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T07:10:31Z</li>
-          <input type="button" onClick="window.open('https://github.com/heerajoshi')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/heerajoshi')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars0.githubusercontent.com/u/16836599?v=4" class="imgArea" alt="null" />
@@ -720,14 +730,14 @@
           <li>Public repos: 30</li>
           <li>Private repos: 0</li>
           <li>Created at: 2016-01-22T11:59:49Z</li>
-          <input type="button" onClick="window.open('https://github.com/vprince001')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/vprince001')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars1.githubusercontent.com/u/44020585?v=4" class="imgArea" alt="Deepika Bartwal" />
@@ -745,14 +755,14 @@
           <li>Public repos: 48</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:48:26Z</li>
-          <input type="button" onClick="window.open('https://github.com/deepikabartwal')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/deepikabartwal')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars3.githubusercontent.com/u/44020073?v=4" class="imgArea" alt="Swagata Chakraborty" />
@@ -770,14 +780,14 @@
           <li>Public repos: 27</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:31:23Z</li>
-          <input type="button" onClick="window.open('https://github.com/swagatachakraborty')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/swagatachakraborty')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars3.githubusercontent.com/u/44020214?v=4" class="imgArea" alt="null" />
@@ -795,14 +805,14 @@
           <li>Public repos: 24</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:35:35Z</li>
-          <input type="button" onClick="window.open('https://github.com/moumitaguri')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/moumitaguri')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars0.githubusercontent.com/u/44019295?v=4" class="imgArea" alt="Tushar Tambe" />
@@ -820,14 +830,14 @@
           <li>Public repos: 51</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:08:41Z</li>
-          <input type="button" onClick="window.open('https://github.com/tushartambe')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/tushartambe')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars2.githubusercontent.com/u/44020369?v=4" class="imgArea" alt="null" />
@@ -845,14 +855,13 @@
           <li>Public repos: 28</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:40:18Z</li>
-          <input type="button" onClick="window.open('https://github.com/sgauravk')" style="font-size: 2vw"
-            value="Know more...">
+          <input type="button" onClick="window.open('https://github.com/sgauravk')" class="button" value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars3.githubusercontent.com/u/44019583?v=4" class="imgArea" alt="null" />
@@ -870,14 +879,14 @@
           <li>Public repos: 44</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:17:09Z</li>
-          <input type="button" onClick="window.open('https://github.com/akankshakutal')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/akankshakutal')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars3.githubusercontent.com/u/44020825?v=4" class="imgArea" alt="null" />
@@ -895,14 +904,13 @@
           <li>Public repos: 22</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:56:07Z</li>
-          <input type="button" onClick="window.open('https://github.com/namankrs')" style="font-size: 2vw"
-            value="Know more...">
+          <input type="button" onClick="window.open('https://github.com/namankrs')" class="button" value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars2.githubusercontent.com/u/44019471?v=4" class="imgArea" alt="null" />
@@ -920,14 +928,14 @@
           <li>Public repos: 25</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:13:29Z</li>
-          <input type="button" onClick="window.open('https://github.com/maheshsovani')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/maheshsovani')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars2.githubusercontent.com/u/44019903?v=4" class="imgArea" alt="null" />
@@ -945,14 +953,14 @@
           <li>Public repos: 23</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-10-10T08:25:49Z</li>
-          <input type="button" onClick="window.open('https://github.com/sumandeepak8')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/sumandeepak8')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars3.githubusercontent.com/u/58026892?v=4" class="imgArea" alt="Noora Nasrin" />
@@ -970,14 +978,14 @@
           <li>Public repos: 10</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T08:21:32Z</li>
-          <input type="button" onClick="window.open('https://github.com/nooranasrin')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/nooranasrin')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars3.githubusercontent.com/u/58027828?v=4" class="imgArea" alt="null" />
@@ -995,14 +1003,13 @@
           <li>Public repos: 4</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T08:47:56Z</li>
-          <input type="button" onClick="window.open('https://github.com/rey-vthi')" style="font-size: 2vw"
-            value="Know more...">
+          <input type="button" onClick="window.open('https://github.com/rey-vthi')" class="button" value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars2.githubusercontent.com/u/56071561?v=4" class="imgArea" alt="anilmuraleedharan" />
@@ -1020,14 +1027,14 @@
           <li>Public repos: 3</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-10-02T10:07:22Z</li>
-          <input type="button" onClick="window.open('https://github.com/anil-muraleedharan')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/anil-muraleedharan')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars0.githubusercontent.com/u/58028408?v=4" class="imgArea" alt="Rashmi Gupta" />
@@ -1045,14 +1052,14 @@
           <li>Public repos: 4</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T09:04:20Z</li>
-          <input type="button" onClick="window.open('https://github.com/photongupta')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/photongupta')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars1.githubusercontent.com/u/26194323?v=4" class="imgArea" alt="Neha Sanserwal" />
@@ -1070,14 +1077,14 @@
           <li>Public repos: 6</li>
           <li>Private repos: 0</li>
           <li>Created at: 2017-03-05T03:05:25Z</li>
-          <input type="button" onClick="window.open('https://github.com/Neha-sanserwal')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/Neha-sanserwal')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars3.githubusercontent.com/u/58027206?v=4" class="imgArea" alt="satheesh .c" />
@@ -1095,14 +1102,14 @@
           <li>Public repos: 2</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T08:31:02Z</li>
-          <input type="button" onClick="window.open('https://github.com/satheesh-chandran')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/satheesh-chandran')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars1.githubusercontent.com/u/41767214?v=4" class="imgArea" alt="Rajat Kushwaha" />
@@ -1120,14 +1127,14 @@
           <li>Public repos: 5</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-07-27T02:29:24Z</li>
-          <input type="button" onClick="window.open('https://github.com/bugdriver')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/bugdriver')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars0.githubusercontent.com/u/58026823?v=4" class="imgArea" alt="anujachaitanya" />
@@ -1145,14 +1152,14 @@
           <li>Public repos: 5</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T08:19:23Z</li>
-          <input type="button" onClick="window.open('https://github.com/anujachaitanya')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/anujachaitanya')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars0.githubusercontent.com/u/58025903?v=4" class="imgArea" alt="null" />
@@ -1170,14 +1177,14 @@
           <li>Public repos: 2</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T07:52:15Z</li>
-          <input type="button" onClick="window.open('https://github.com/apurvagurme')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/apurvagurme')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars0.githubusercontent.com/u/58027350?v=4" class="imgArea" alt="null" />
@@ -1195,14 +1202,14 @@
           <li>Public repos: 2</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T08:35:02Z</li>
-          <input type="button" onClick="window.open('https://github.com/drishya-dobriyal')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/drishya-dobriyal')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars1.githubusercontent.com/u/32271882?v=4" class="imgArea"
@@ -1221,14 +1228,14 @@
           <li>Public repos: 3</li>
           <li>Private repos: 0</li>
           <li>Created at: 2017-09-25T15:32:47Z</li>
-          <input type="button" onClick="window.open('https://github.com/lazyhackerthani')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/lazyhackerthani')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars2.githubusercontent.com/u/58025656?v=4" class="imgArea"
@@ -1247,14 +1254,14 @@
           <li>Public repos: 4</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T07:45:36Z</li>
-          <input type="button" onClick="window.open('https://github.com/bernie-walker')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/bernie-walker')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars2.githubusercontent.com/u/58027100?v=4" class="imgArea" alt="Sravani Labala" />
@@ -1272,14 +1279,14 @@
           <li>Public repos: 5</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T08:28:12Z</li>
-          <input type="button" onClick="window.open('https://github.com/sravani-labala')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/sravani-labala')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars2.githubusercontent.com/u/58027263?v=4" class="imgArea" alt="Saurabh Chauhan" />
@@ -1297,14 +1304,14 @@
           <li>Public repos: 11</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T08:32:42Z</li>
-          <input type="button" onClick="window.open('https://github.com/symbiote-ux')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/symbiote-ux')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars3.githubusercontent.com/u/58027436?v=4" class="imgArea" alt="Santhosh" />
@@ -1322,14 +1329,14 @@
           <li>Public repos: 2</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T08:37:18Z</li>
-          <input type="button" onClick="window.open('https://github.com/bsanthoshkumar')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/bsanthoshkumar')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars3.githubusercontent.com/u/58026402?v=4" class="imgArea" alt="naveen kumar" />
@@ -1347,14 +1354,14 @@
           <li>Public repos: 7</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T08:07:33Z</li>
-          <input type="button" onClick="window.open('https://github.com/naveen-kumar-vadla')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/naveen-kumar-vadla')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars0.githubusercontent.com/u/58025419?v=4" class="imgArea" alt="Nagendra Sai" />
@@ -1372,14 +1379,14 @@
           <li>Public repos: 6</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T07:38:15Z</li>
-          <input type="button" onClick="window.open('https://github.com/myultimatevision')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/myultimatevision')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars2.githubusercontent.com/u/58027647?v=4" class="imgArea" alt="Vaishnavi Yadav" />
@@ -1397,14 +1404,13 @@
           <li>Public repos: 4</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T08:43:29Z</li>
-          <input type="button" onClick="window.open('https://github.com/imvaishu')" style="font-size: 2vw"
-            value="Know more...">
+          <input type="button" onClick="window.open('https://github.com/imvaishu')" class="button" value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars1.githubusercontent.com/u/58028488?v=4" class="imgArea" alt="Ayush kumar" />
@@ -1422,14 +1428,14 @@
           <li>Public repos: 9</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T09:06:43Z</li>
-          <input type="button" onClick="window.open('https://github.com/desibabua')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/desibabua')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars1.githubusercontent.com/u/58028680?v=4" class="imgArea" alt="Vikram Singh" />
@@ -1447,14 +1453,13 @@
           <li>Public repos: 7</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T09:12:47Z</li>
-          <input type="button" onClick="window.open('https://github.com/bcalm')" style="font-size: 2vw"
-            value="Know more...">
+          <input type="button" onClick="window.open('https://github.com/bcalm')" class="button" value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars2.githubusercontent.com/u/58026600?v=4" class="imgArea" alt="Shankar Byageli" />
@@ -1472,14 +1477,14 @@
           <li>Public repos: 4</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T08:12:44Z</li>
-          <input type="button" onClick="window.open('https://github.com/shankarbyageli')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/shankarbyageli')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars0.githubusercontent.com/u/58027796?v=4" class="imgArea" alt="RK" />
@@ -1497,14 +1502,13 @@
           <li>Public repos: 6</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T08:46:56Z</li>
-          <input type="button" onClick="window.open('https://github.com/melodyni')" style="font-size: 2vw"
-            value="Know more...">
+          <input type="button" onClick="window.open('https://github.com/melodyni')" class="button" value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars0.githubusercontent.com/u/58025056?v=4" class="imgArea" alt="Abhilash Kasula" />
@@ -1522,14 +1526,14 @@
           <li>Public repos: 8</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T07:27:19Z</li>
-          <input type="button" onClick="window.open('https://github.com/abhilashkasula')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/abhilashkasula')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars3.githubusercontent.com/u/58026896?v=4" class="imgArea" alt="dad love❤️" />
@@ -1547,14 +1551,14 @@
           <li>Public repos: 3</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T08:21:37Z</li>
-          <input type="button" onClick="window.open('https://github.com/dad-ka-raneesa')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/dad-ka-raneesa')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars1.githubusercontent.com/u/58025059?v=4" class="imgArea" alt="Shivam Rajput" />
@@ -1572,14 +1576,13 @@
           <li>Public repos: 9</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T07:27:22Z</li>
-          <input type="button" onClick="window.open('https://github.com/shiviraj')" style="font-size: 2vw"
-            value="Know more...">
+          <input type="button" onClick="window.open('https://github.com/shiviraj')" class="button" value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars2.githubusercontent.com/u/58028287?v=4" class="imgArea" alt="phaneendra" />
@@ -1597,14 +1600,14 @@
           <li>Public repos: 1</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T09:00:30Z</li>
-          <input type="button" onClick="window.open('https://github.com/cricket-lover')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/cricket-lover')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars3.githubusercontent.com/u/58025838?v=4" class="imgArea" alt="null" />
@@ -1622,14 +1625,14 @@
           <li>Public repos: 9</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T07:50:32Z</li>
-          <input type="button" onClick="window.open('https://github.com/palpriyanshu')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/palpriyanshu')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars3.githubusercontent.com/u/58026024?v=4" class="imgArea" alt="Rivu Layek" />
@@ -1647,14 +1650,13 @@
           <li>Public repos: 11</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T07:56:18Z</li>
-          <input type="button" onClick="window.open('https://github.com/unphydra')" style="font-size: 2vw"
-            value="Know more...">
+          <input type="button" onClick="window.open('https://github.com/unphydra')" class="button" value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars2.githubusercontent.com/u/58026249?v=4" class="imgArea" alt="venkatesh bavisetti" />
@@ -1672,14 +1674,14 @@
           <li>Public repos: 5</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T08:02:42Z</li>
-          <input type="button" onClick="window.open('https://github.com/venkybavisetti')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/venkybavisetti')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars0.githubusercontent.com/u/58026094?v=4" class="imgArea" alt="Winterfell" />
@@ -1697,14 +1699,13 @@
           <li>Public repos: 3</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T07:58:03Z</li>
-          <input type="button" onClick="window.open('https://github.com/rahitkar')" style="font-size: 2vw"
-            value="Know more...">
+          <input type="button" onClick="window.open('https://github.com/rahitkar')" class="button" value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars1.githubusercontent.com/u/58025792?v=4" class="imgArea" alt="Sudipta Kundu" />
@@ -1722,14 +1723,14 @@
           <li>Public repos: 10</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T07:49:10Z</li>
-          <input type="button" onClick="window.open('https://github.com/mildshower')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/mildshower')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars3.githubusercontent.com/u/58028207?v=4" class="imgArea" alt="null" />
@@ -1747,14 +1748,13 @@
           <li>Public repos: 5</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T08:58:28Z</li>
-          <input type="button" onClick="window.open('https://github.com/gulsane')" style="font-size: 2vw"
-            value="Know more...">
+          <input type="button" onClick="window.open('https://github.com/gulsane')" class="button" value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars0.githubusercontent.com/u/58027046?v=4" class="imgArea" alt="Sruthy P S" />
@@ -1772,14 +1772,13 @@
           <li>Public repos: 6</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T08:26:46Z</li>
-          <input type="button" onClick="window.open('https://github.com/pssruthy')" style="font-size: 2vw"
-            value="Know more...">
+          <input type="button" onClick="window.open('https://github.com/pssruthy')" class="button" value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars1.githubusercontent.com/u/58026183?v=4" class="imgArea"
@@ -1798,14 +1797,14 @@
           <li>Public repos: 2</li>
           <li>Private repos: 0</li>
           <li>Created at: 2019-11-21T08:00:37Z</li>
-          <input type="button" onClick="window.open('https://github.com/trinangkur')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/trinangkur')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars1.githubusercontent.com/u/44823431?v=4" class="imgArea" alt="AAQUIB EQUBAL" />
@@ -1823,14 +1822,14 @@
           <li>Public repos: 10</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-11-07T01:00:45Z</li>
-          <input type="button" onClick="window.open('https://github.com/armanaaquib')" style="font-size: 2vw"
+          <input type="button" onClick="window.open('https://github.com/armanaaquib')" class="button"
             value="Know more...">
         </ul>
         </p>
       </div>
     </div>
 
-    <div onmouseover="mo(this)" onmouseout="mou(this)">
+    <div onmouseover="rotateBack(this)" onmouseout="rotateFront(this)">
       <div class="user">
         <div class="image">
           <img src="https://avatars3.githubusercontent.com/u/40167376?v=4" class="imgArea" alt="sukhiboi" />
@@ -1848,8 +1847,7 @@
           <li>Public repos: 8</li>
           <li>Private repos: 0</li>
           <li>Created at: 2018-06-11T10:16:31Z</li>
-          <input type="button" onClick="window.open('https://github.com/sukhiboi')" style="font-size: 2vw"
-            value="Know more...">
+          <input type="button" onClick="window.open('https://github.com/sukhiboi')" class="button" value="Know more...">
         </ul>
         </p>
       </div>
